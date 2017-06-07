@@ -49,7 +49,7 @@ Options:
  10). Admin Panel Finder.
   
   Example:
-	python SiteBroker.php
+	php SiteBroker.php
 </code></pre>
 
 
