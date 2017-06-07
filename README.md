@@ -55,10 +55,13 @@ Options:
 
 ### Note 
 <pre><code>Do not change the position of any argument as given under the Usage, this may cause an error or failure in downloading of course.
-P.S ~ Dont Change The Colors I Like Them Butiphul like this.
+P.S ~ Dont Change The Colors. They're Butiphul like this.
 ~ An0n 3xPloiTeR
 
 P.S.S ~ Lets Take A Look At More Screenshots ^_^</code></pre>
+<img src="http://i.imgur.com/TCKlFau.jpg">
 <img src="http://i.imgur.com/kez7mXl.jpg">
 <img src="http://i.imgur.com/Um8vW2A.jpg">
 <img src="http://i.imgur.com/Qw9k11c.jpg">
+<img src="http://i.imgur.com/u8HFLW4.jpg">
+<img src="http://i.imgur.com/gnhVv1q.jpg">
