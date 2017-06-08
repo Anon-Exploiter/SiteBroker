@@ -18,7 +18,7 @@
 	 
 ### Download SiteBroker
 
-You can download the latest version of udemy-dl by cloning the GitHub repository.
+You can download the latest version of SiteBroker by cloning the GitHub repository.
 
 	git clone https://github.com/Anon-Exploiter/SiteBroker
 
