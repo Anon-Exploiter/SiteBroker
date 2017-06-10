@@ -1,90 +1,93 @@
 <?php
 
-/*  Use With CLI-PHP
-A Tool By An0n 3xPloiTeR && Inj3ctor Osman :) :D
-Changing Author Name Wont Make You One :)
+/*
+_______________.___.
+\______   \__  |   |
+ |    |  _//   |   |
+ |    |   \\____   |
+ |______  // ______|
+        \/ \/       
+   _____         _______           ________        __________.__         ._____________   __________ 
+  /  _  \   ____ \   _  \   ____   \_____  \___  __\______   |  |   ____ |__\__    _______\______   \
+ /  /_\  \ /    \/  /_\  \ /    \    _(__  <\  \/  /|     ___|  |  /  _ \|  | |    |_/ __ \|       _/
+/    |    |   |  \  \_/   |   |  \  /       \>    < |    |   |  |_(  <_> |  | |    |\  ___/|    |   \
+\____|__  |___|  /\_____  |___|  / /______  /__/\_ \|____|   |____/\____/|__| |____| \___  |____|_  /
+        \/     \/       \/     \/         \/      \/                                     \/       \/ 
+
+                                ~ Changing Author Name Wont Make You One :) 
+                                             #Respect Coders
 */
 
 error_reporting(0);
 
-function crawl_website($website) {
+function crawl($website) {
 
-	require 'dom.php';
-	$crawled_urls=array();
-	$found_urls=array();
+	$search = "site:" . $website. "";
 
-	function rel2abs($rel, $base){
-		if (parse_url($rel, PHP_URL_SCHEME) != '') return $rel;
-		if ($rel[0]=='#' || $rel[0]=='?') return $base.$rel;
-		extract(parse_url($base));
-		$path = preg_replace('#/[^/]*$#', '', $path);
-		if ($rel[0] == '/') $path = '';
-		$abs = "$host$path/$rel";
-		$re = array('#(/\.?/)#', '#/(?!\.\.)[^/]+/\.\./#');
-		for($n=1; $n>0;$abs=preg_replace($re,'/', $abs,-1,$n)){}
-		$abs=str_replace("../","",$abs);
-		return $scheme.'://'.$abs;
-	}
+	$pag = 10;
 
-	function perfect_url($u,$b){
-		$bp=parse_url($b);
-
-		if(($bp['path']!="/" && $bp['path']!="") || $bp['path']==''){
-
-			if($bp['scheme']==""){$scheme="http";}else{$scheme=$bp['scheme'];}
-	  			$b=$scheme."://".$bp['host']."/";
-			}
+	for ($pag= 0; $pag < 10; $pag++){
+			
+		$url = "https://google.com/search?q=" . $search . "&ie=utf-8&oe=utf-8&aq=t&start=" . $pag . "0";
 	 
-		if(substr($u,0,2)=="//"){
-			$u="http:".$u;
+		$input = file_get_contents($url);
+
+		$regexp = "/<a href=\"\/url\?q=(.*?)&amp(.*?)\">/";
+
+	 	if (preg_match_all($regexp, $input, $matches, PREG_SET_ORDER)) {
+
+			foreach($matches as $match) {
+
+				echo $match[1] . "\n";
+
+				// thanks to inj3ct0r 0sman <3
+			}
 		}
-
-	 	if(substr($u,0,4)!="http"){
-	  		$u=rel2abs($u,$b);
-	 	}
-
-	return $u;
-	
-	}
-	
-	function crawl_site($u){
-		global $crawled_urls;
-		$uen=urlencode($u);
-
-		if((array_key_exists($uen,$crawled_urls)==0 || $crawled_urls[$uen] < date("YmdHis",strtotime('-25 seconds', time())))){
-
-			$html = file_get_html($u);
-	  		$crawled_urls[$uen]=date("YmdHis");
-
-	  		foreach($html->find("a") as $li){
-
-	   			$url=perfect_url($li->href,$u);
-	   			$enurl=urlencode($url);
-
-	   			if($url!='' && substr($url,0,4)!="mail" && substr($url,0,4)!="java" && array_key_exists($enurl,$found_urls)==0){
-	    		$found_urls[$enurl]=1;
-
-	    		echo "  ".$url."\n";
-
-	    		}
-	   		}
-	  	}
-	}
-
-
-
-	
-
-	echo "\n  [+] Result:\n";
-	crawl_site($website);
-	
-
+	} 
 }
 
-crawl_website($argv[1]);
+/*
 
+function SQLi($website) {
 
+	$search = "inurl:php?id=&site:" . $website. "";
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////
+	$pag = 10;
+
+	for ($pag= 0; $pag < 10; $pag++){
+			
+		$url = "https://google.com/search?q=" . $search . "&ie=utf-8&oe=utf-8&aq=t&start=" . $pag . "0";
+	 
+		$input = file_get_contents($url);
+
+		$regexp = "/<a href=\"\/url\?q=(.*?)&amp(.*?)\">/";
+
+	 	if (preg_match_all($regexp, $input, $matches, PREG_SET_ORDER)) {
+
+			foreach($matches as $match) {
+
+				$sites = $match[1];
+
+				$filtered_site = urldecode($sites);
+
+				$vuln_sites = $filtered_site . "%27";
+
+ 				$new = file_get_contents($vuln_sites);
+
+ 				$sqli = array('SQL syntax', 'MySQL', 'mysql_', 'argument is not');
+ 			      
+				if(strpos($new, $sqli['0']) or $old != $new) {
+
+					echo " [+] $sresu : vuln\n";
+
+				}
+			}
+		}
+	}
+}
+
+SQLi("maldacollege.ac.in");
+
+*/
 
 ?>
