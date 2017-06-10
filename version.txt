@@ -1,2 +1,16 @@
-Version ==> 1.0
-// Please Dont Edit This :)
+Version ==> 2.0 (Current Version):
+
+BugFixes:
+1). Directory Listing Problem Solved.
+2). PHP Based Admin Panel Added.
+3). Google Based Crawler Added.
+
+Whats New:
+1). Google Based Crawler Which Crawls Websites By Using A Dork And Fetches Websites By Regular Expressions #Regex is <3 
+2). Banner Grabber Added Which Displays The Responses And Everything.
+
+
+
+
+Version ==> 1.0 (Old Version):
+The Version Under Which It Was Made.
