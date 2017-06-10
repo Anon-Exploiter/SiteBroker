@@ -8,9 +8,10 @@ BugFixes:
 Whats New:
 1). Google Based Crawler Which Crawls Websites By Using A Dork And Fetches Websites By Regular Expressions #Regex is <3 
 2). Banner Grabber Added Which Displays The Responses And Everything.
+3). Added Regular Expressions in Admin Panel Founder To Display Most Accurate Results.
+4). Also Added Regular Expressions in Shell Finder To Display Most Accurate Results.
 
-
-
+______________________________________________________________________________________________________________________
 
 Version ==> 1.0 (Old Version):
 The Version Under Which It Was Made.
