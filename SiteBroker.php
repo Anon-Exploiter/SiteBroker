@@ -43,7 +43,7 @@ if (!empty($argument)) {
 
 	$website = checkWebsite($argument); // let me see what are you inputting :P
 
-	echo $green . "\n [\$] What You Wanna Do With The Given Website ? \n\n 1). Cloudlfare Bypass. \n 2). Website Crawler.\n 3). Reverse IP.\n 4). Information Gathering.\n 5). Nameservers.\n 6). WebSite Speed.\n 7). Subdomains Scanner\n 8). Shell Finder.\n 9). All Things.\n 10). Admin Panel Finder.\n\n " . $cyan . "[\$] Select Any Of Thy Indexes (i.e, 1, 2, 3): ";
+	echo $green . "\n [\$] What You Wanna Do With The Given Website ? \n\n 1). Cloudlfare Bypass. \n 2). Website Crawler.\n 3). Reverse IP.\n 4). Information Gathering.\n 5). Nameservers.\n 6). WebSite Speed.\n 7). Subdomains Scanner\n 8). Shell Finder.\n 9). Admin Panel Finder.\n 10). Grab Banner\n 11). All Things.\n " . $cyan . "[\$] Select Any Of Thy Indexes (i.e, 1, 2, 3): ";
 
 	$argument = trim(fgets(STDIN, 1024));
 	
@@ -59,10 +59,10 @@ if (!empty($argument)) {
 
 		elseif ($argument == "2") {
 
-			echo $green . "\n [+] Started To Crawl The Website For Parameters: \"" . $website . "\"\n" . $yellow . "";
-			$command = "cd scripts/crawler/;php crawler.php " . checkInputWebsite($website) . "";
-			$result = execute($command);
-			echo $result . "\n\n [\$] Crawling Done ^_^\n\tThanks For Using :D \n\t\t~ An0n 3xPloiTeR\n";
+			echo $green . "\n [+] Started To Crawl The Website For Parameters: \"" . $website . "\"\n" . $yellow . "\n";
+			include "scripts/Crawler/crawler.php";
+			crawl($website);
+			echo "\n\n [\$] Crawling Done ^_^\n\tThanks For Using :D \n\t\t~ An0n 3xPloiTeR\n";
 
 		}
 
@@ -208,6 +208,24 @@ if (!empty($argument)) {
 
 		elseif ($argument == "9") {
 
+			echo $green . "\n [+] Started To Find Admin Panel Of \"" . $website . "\" " . $red . "(#BePatient It Takes 5 to 10 minutes)\n" . $cyan . "";
+			include "modules/admin_panel.php";
+			echo checkAdminPanel(checkInputWebsite($website));
+			echo $result . "\n\n [\$] Admin Panel Found :)\n\tThanks For Using :D \n\t\t~ An0n 3xPloiTeR\n";
+		}
+
+		elseif ($argument == "10") {
+
+			echo $green . "\n [+] Started To Grab The Banner Of \"" . $website . "\"\n" . $cyan . "";
+			include "modules/bannergrab.php";
+			echo grabBanner(checkInputWebsite($website));
+			echo $result . "\n\n [\$] Banner Found :)\n\tThanks For Using :D \n\t\t~ An0n 3xPloiTeR\n";
+
+		}
+
+		elseif ($argument == "11") {
+			
+
 			echo $green . "\n [+] Started To Find Every Index Given Above Of \"" . $website . "\"".$red." (#It May Take A While :)\n" . $yellow . "";
 
 			// checking for cloudflare
@@ -283,14 +301,11 @@ if (!empty($argument)) {
 			echo shellcheck(checkInputWebsite($website));
 			echo $yellow . "\n [\$] Finding Shells Done ^_^\n\tThanks For Using :D \n\t\t~ An0n 3xPloiTeR\n";
 
-		}
-
-		elseif ($argument == "10") {
-
 			echo $green . "\n [+] Started To Find Admin Panel Of \"" . $website . "\" " . $red . "(#BePatient It Takes 5 to 10 minutes)\n" . $cyan . "";
-			$command = "cd scripts/Admin_Panel_Founder/;python adgrab.py --url " . checkInputWebsite($website) . " --wordlist wordlist.txt";
-			$result = execute($command);
+			include "modules/admin_panel.php";
+			echo checkAdminPanel(checkInputWebsite($website));
 			echo $result . "\n\n [\$] Admin Panel Found :)\n\tThanks For Using :D \n\t\t~ An0n 3xPloiTeR\n";
+
 		}
 
 		else {
@@ -307,5 +322,8 @@ if (!empty($argument)) {
 elseif (empty($argument)) {
 	die($errno);
 }
+
+# So The Shit Ends ^_^ :3 
+# ~ An0n 3xPloiTeR
 
 ?>
