@@ -34,17 +34,33 @@ function shellcheck($website) {
 	foreach ($array as $shell) {
 
 		$combo = $website . "/" . $shell;
-		
-		if (file_get_contents($combo)) {
-			echo $combo . " ==>  Found\n";
-		} 
 
-		else {
-			echo $combo . " ==>  Not Found\n";
+		$host = get_headers($combo);
+
+		if (preg_match("/200/i", $host[0])) {
+			echo "\n" .$combo . " ==> Found" . "\n\n";
 		}
 
-	}
+		elseif (preg_match("/301/i", $host[0])) {
+			echo "\n".$combo . " ==> Found" . "\n\n";
+		}
 
+		elseif (preg_match("/302/i", $host[0])) {
+			echo "\n" .$combo . " ==> Found" . "\n\n";
+		}
+
+		elseif (preg_match("/403/i", $host[0])) {
+			echo "\n" .$combo . " ==> Found" . "\n\n";
+		}
+
+		elseif (preg_match("/404/i", $host[0])) {
+			echo $combo . " => Not Found" . "\n";
+		}
+
+		else {
+			echo $combo . " => Not Found" . "\n";
+		}
+	}
 }
 
 ?>
