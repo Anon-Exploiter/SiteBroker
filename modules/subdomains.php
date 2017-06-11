@@ -32,7 +32,7 @@ function checkSubDomains($website) {
 	} 
 
 	else {
-		die("[\$] Sorry There Aren't Any Sub Domains of The Website Your Entered.\n");
+		echo "[\$] Sorry There Aren't Any Sub Domains of The Website Your Entered.\n";
 	}
 }
 
