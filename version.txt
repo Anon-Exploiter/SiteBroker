@@ -1,4 +1,15 @@
-Version ==> 2.0 (Current Version):
+Version ==> 3.0 (Current Version):
+
+BugFixes:
+1). Fixed Crawler Opening And Finding.
+2). Fixed Some Grammer Mistakes.
+
+WhatsNew:
+Nothing Till Now :)
+
+______________________________________________________________________________________________________________________
+
+Version ==> 2.0 (Old Version):
 
 BugFixes:
 1). Directory Listing Problem Solved.
