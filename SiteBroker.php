@@ -43,7 +43,7 @@ if (!empty($argument)) {
 
 	$website = checkWebsite($argument); // let me see what are you inputting :P
 
-	echo $green . "\n [\$] What You Wanna Do With The Given Website ? \n\n 1). Cloudlfare Bypass. \n 2). Website Crawler.\n 3). Reverse IP.\n 4). Information Gathering.\n 5). Nameservers.\n 6). WebSite Speed.\n 7). Subdomains Scanner\n 8). Shell Finder.\n 9). Admin Panel Finder.\n 10). Grab Banner\n 11). All Things.\n " . $cyan . "[\$] Select Any Of Thy Indexes (i.e, 1, 2, 3): ";
+	echo $green . "\n [\$] What You Wanna Do With The Given Website ? \n\n 1). Cloudlfare Bypass. \n 2). Website Crawler.\n 3). Reverse IP.\n 4). Information Gathering.\n 5). Nameservers.\n 6). WebSite Speed.\n 7). Subdomains Scanner.\n 8). Shell Finder.\n 9). Admin Panel Finder.\n 10). Grab Banner.\n 11). All Things.\n\n " . $cyan . "[\$] Select Any Of Thy Indexes (i.e, 1, 2, 3): ";
 
 	$argument = trim(fgets(STDIN, 1024));
 	
