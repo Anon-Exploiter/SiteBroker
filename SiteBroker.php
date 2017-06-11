@@ -59,7 +59,7 @@ if (!empty($argument)) {
 
 		elseif ($argument == "2") {
 
-			echo $green . "\n [+] Started To Crawl The Website For Parameters: \"" . $website . "\"\n" . $yellow . "\n";
+			echo $green . "\n [+] Started To Crawl:  \"" . $website . "\"\n" . $yellow . "\n";
 			include "scripts/crawler/crawler.php";
 			crawl($website);
 			echo "\n\n [\$] Crawling Done ^_^\n\tThanks For Using :D \n\t\t~ An0n 3xPloiTeR\n";
@@ -237,7 +237,7 @@ if (!empty($argument)) {
 
 			// lets crawl the bitch :P 
 
-			echo $green . "\n [+] Started To Crawl The Website For Parameters: \"" . $website . "\"\n" . $yellow . "";
+			echo $green . "\n [+] Started To Crawl: \"" . $website . "\"\n" . $yellow . "";
 			include "scripts/crawler/crawler.php";
 			crawl($website);
 			echo $result . "\n\n [\$] Crawling Done ^_^\n\tThanks For Using :D \n\t\t~ An0n 3xPloiTeR\n";
