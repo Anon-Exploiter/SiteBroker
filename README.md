@@ -54,7 +54,7 @@ Options:
 
 
 ### Note 
-<pre><code>Do not change the position of any argument as given under the Usage, this may cause an error or failure in downloading of course.
+<pre><code>Do not change the position of any argument as given under the Usage, this may cause an error or failure in the working of the script...
 P.S ~ Dont Change The Colors. They're Butiphul like this.
 ~ An0n 3xPloiTeR
 
