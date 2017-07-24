@@ -1,4 +1,16 @@
-Version ==> 3.0 (Current Version):
+Version ==> 4.0(Current Version):
+
+1). Fixed Some Major Issues.
+2). Fixed WhoIS Issue of Not Loading The WhoIS File.
+3). Merged All The Modules And Files Into Single File SiteBroker.php
+4). Fixed The Index Error in BannerGrab.
+5). Fixed Some Small Issues Of SiteSpeed Loading Checker.
+
+
+
+______________________________________________________________________________________________________________________
+
+Version ==> 3.0:
 
 BugFixes:
 1). Fixed Crawler Opening And Finding.
