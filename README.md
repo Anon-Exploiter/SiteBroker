@@ -1,7 +1,7 @@
 # SiteBroker
 **A cross-platform php based utility to scratch websites and test it with approx. every angle.**
 
-<img src="http://i.imgur.com/TCKlFau.jpg" />
+<img src="https://image.prntscr.com/image/qdw5dvlgTCefFoZZJkljJA.png" />
 ### Requirements
 
 - Php (5 || 7)
@@ -59,9 +59,9 @@ P.S ~ Dont Change The Colors. They're Butiphul like this.
 ~ An0n 3xPloiTeR
 
 P.S.S ~ Lets Take A Look At More Screenshots ^_^</code></pre>
-<img src="http://i.imgur.com/TCKlFau.jpg">
-<img src="http://i.imgur.com/kez7mXl.jpg">
-<img src="http://i.imgur.com/Um8vW2A.jpg">
-<img src="http://i.imgur.com/Qw9k11c.jpg">
-<img src="http://i.imgur.com/u8HFLW4.jpg">
-<img src="http://i.imgur.com/gnhVv1q.jpg">
+<img src="https://image.prntscr.com/image/0xSJYySjSACZdHW_9tllsg.png">
+<img src="https://image.prntscr.com/image/X6MNdiSsR2OYJUWI6fKasQ.png">
+<img src="https://image.prntscr.com/image/7QnFRcFhS8uP17zsHTrCBA.png">
+<img src="https://image.prntscr.com/image/4-LwQAmpSwOE6-eTgJ4SQw.png">
+<img src="https://image.prntscr.com/image/E1CnT215RAihZI9GB0FsMg.png">
+<img src="https://image.prntscr.com/image/6c9fhTI_RZKbmmnwot6jzQ.png">
