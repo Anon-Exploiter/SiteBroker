@@ -606,28 +606,12 @@ function checkAdminPanel($website) {
 
 		$host = get_headers($combo);
 
-		if (preg_match("/200/i", $host[0])) {
-			echo "\n" .$combo . " ==> Found" . "\n\n";
-		}
-
-		elseif (preg_match("/301/i", $host[0])) {
-			echo "\n".$combo . " ==> Found" . "\n\n";
-		}
-
-		elseif (preg_match("/302/i", $host[0])) {
-			echo "\n" .$combo . " ==> Found" . "\n\n";
-		}
-
-		elseif (preg_match("/403/i", $host[0])) {
-			echo "\n" .$combo . " ==> Found" . "\n\n";
-		}
-
-		elseif (preg_match("/404/i", $host[0])) {
+		if (preg_match("/404/i", $host[0]) || preg_match("/403/i", $host[0]) || preg_match("/500/i", $host[0])) {
 			echo $combo . " => Not Found" . "\n";
 		}
 
 		else {
-			echo $combo . " => Not Found" . "\n";
+			echo "\n" .$combo . " ==> Found" . "\n\n";
 		}
 	}
 }
@@ -674,28 +658,12 @@ function shellcheck($website) {
 
 		$host = get_headers($combo);
 
-		if (preg_match("/200/i", $host[0])) {
-			echo "\n" .$combo . " ==> Found" . "\n\n";
-		}
-
-		elseif (preg_match("/301/i", $host[0])) {
-			echo "\n".$combo . " ==> Found" . "\n\n";
-		}
-
-		elseif (preg_match("/302/i", $host[0])) {
-			echo "\n" .$combo . " ==> Found" . "\n\n";
-		}
-
-		elseif (preg_match("/403/i", $host[0])) {
-			echo "\n" .$combo . " ==> Found" . "\n\n";
-		}
-
-		elseif (preg_match("/404/i", $host[0])) {
+		if (preg_match("/404/i", $host[0]) || preg_match("/403/i", $host[0]) || preg_match("/500/i", $host[0])) {
 			echo $combo . " => Not Found" . "\n";
 		}
 
 		else {
-			echo $combo . " => Not Found" . "\n";
+			echo "\n" .$combo . " ==> Found" . "\n\n";
 		}
 	}
 }
@@ -1896,7 +1864,7 @@ if (!empty($argument)) {
 		}
 
 	} 
-
+	
 	elseif (!is_numeric($argument)) { // I think it isn't :/ 
 		die($val_error);
 	}
