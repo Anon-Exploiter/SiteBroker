@@ -1,7 +1,7 @@
 # SiteBroker
 **A cross-platform php based utility to scratch websites and test it with approx. every angle.**
 
-<img src="https://image.prntscr.com/image/qdw5dvlgTCefFoZZJkljJA.png" />
+<img src="https://i.imgur.com/MIeVCQV.png" />
 ### Requirements
 
 - Php (5 || 7)
