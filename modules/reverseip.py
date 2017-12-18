@@ -16,3 +16,7 @@ def reverseViaHT(website):
 				write(var="#", color=c, data=_links)
 	else:
 		write(var="@", color=r, data="Sorry, The webserver of the website you entered have no domains other then the one you gave :')")
+
+def reverseViaVGS(website):
+	website = addHTTP(website); webs = removeHTTP(website)
+	
