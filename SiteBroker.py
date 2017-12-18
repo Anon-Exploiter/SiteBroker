@@ -24,7 +24,7 @@ _______________.___.
 from insides import *
 from modules import Cloudflare
 from modules import GoogleCrawl, BingCrawl, ManualCrawl
-from modules import reverseViaHT
+from modules import reverseViaHT, reverseViaYGS
 
 import re 
 
@@ -107,9 +107,8 @@ print(Banner)
 # heading(heading="Crawling", website="http://umarshah.tk", afterWebHead=" Manually :)", color=c)
 # ManualCrawl("http://umarshah.tk")
 
-heading(heading="Doing Reverse IP OF", website="http://umarshah.tk", afterWebHead=" Via YGS!", color=c)
-reverseViaYGS("http://umararfeen.com")
+# heading(heading="Doing Reverse IP OF", website="http://umarshah.tk", afterWebHead=" Via YGS!", color=c)
+# reverseViaYGS("http://umararfeen.com")
 
-
-# heading(heading="Doing Reverse IP OF", website="http://umarshah.tk", afterWebHead=" Via HT <3", color=c)
+# heading(heading="Doing Reverse IP OF", website="http://umarshah.tk", afterWebHead=" Via HT <3", color=g)
 # reverseViaHT("http://umararfeen.com")

@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from insides.colors import *
 from insides.functions import _headers, write, Request, removeHTTP, addHTTP
 import re, os
-import requests
+import requests, json
 
 def reverseViaHT(website):
 	website = addHTTP(website); webs = removeHTTP(website)
@@ -17,6 +17,35 @@ def reverseViaHT(website):
 	else:
 		write(var="@", color=r, data="Sorry, The webserver of the website you entered have no domains other then the one you gave :')")
 
-def reverseViaVGS(website):
+def reverseViaYGS(website):
 	website = addHTTP(website); webs = removeHTTP(website)
-	
+	url = "https://domains.yougetsignal.com/domains.php"
+	post = {
+        'remoteAddress' : webs,
+        'key' : ''
+    }
+	request = requests.post(url, headers=_headers, data=post).text.encode('UTF-8')
+	# print request
+
+	grab = json.loads(request)
+
+	Status = grab['status']
+	IP = grab['remoteIpAddress']
+	Domain = grab['remoteAddress']
+	Total_Domains = grab['domainCount']
+	Array = grab['domainArray']
+
+	if (Status == 'Fail'):
+		write(var="#", color=r, data="Sorry! Reverse Ip Limit Reached.")
+	else:
+		write(var="$", color=c, data="IP: " + IP + "")
+		write(var="$", color=c, data="Domain: " + Domain + "")
+		write(var="$", color=c, data="Total Domains: " + Total_Domains + "\n")
+
+        domains = []
+
+        for x, y in Array:
+            domains.append(x)
+
+        for res in domains:
+			write(var="#", color=b, data=res)
