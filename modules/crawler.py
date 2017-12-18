@@ -6,6 +6,7 @@ import requests
 
 def googleCrawl(website):
 	search = ("site:" + str(removeHTTP(website)))
+	webs = removeHTTP(website)
 	for loop in range(0,10):
 		url = "https://google.com/search?q=" + str(search) + "&ie=utf-8&oe=utf-8&aq=t&start=" + str(loop) + "0"
 		request = requests.get(url, headers=_headers, timeout=5)
@@ -14,10 +15,12 @@ def googleCrawl(website):
 		sub_links = soup.find_all('h3', class_='r')
 		for links in sub_links:
 			links = links.a['href']
-			write(var="~", color=g, data=links)
+			if str(webs) in links:
+				write(var="~", color=c, data=links)
 
 def bingCrawl(website):
 	search = ("site:" + str(removeHTTP(website)))
+	webs = removeHTTP(website)
 	link = []
 	_link = []
 	_links = []
@@ -30,10 +33,12 @@ def bingCrawl(website):
 
 	_link = set(link)
 	for links in _link:
-		print links
+		if str(webs) in links:
+			write(var="~", color=g, data=links)
 
 def manualCrawl(website):
 	website = addHTTP(website)
+	webs = removeHTTP(website)
 	request = Request(website, _timeout=5, _encode=True)
 	soup = BeautifulSoup(request, 'lxml')
 	### Links are in ['a', 'link', 'img', 'svg', 'iframe', 'embed', 'audio']
@@ -42,8 +47,25 @@ def manualCrawl(website):
 
 	a = soup.find_all("a")
 	for links in a:
-		print links['href']
+		_links.append(links['href'])
 
 	link = soup.find_all("link")
 	for links in a:
-		print links['href']
+		_links.append(links['href'])
+
+	img = soup.find_all("img")
+	for links in img:
+		_links.append(links['src'])
+
+	iframe = soup.find_all("iframe")
+	for links in iframe:
+		_links.append(links['src'])
+
+	embed = soup.find_all("embed")
+	for links in embed:
+		_links.append(links['src'])
+	
+	_links = set(_links)
+	for __links in _links:
+		if str(webs) in __links:
+			write(var="~", color=c, data=__links)
