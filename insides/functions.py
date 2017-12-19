@@ -55,9 +55,12 @@ def addHTTP(website):
     website = ("http://" + website); return(website)
 
 def write(var, color, data):
-    print("{white}[{green}" + var + "{white}] " + color + str(data)).format(
-    	white=w, green=g
-	)
+    if var == None:
+        print(color + str(data))
+    elif var != None:
+        print("{white}[{green}" + var + "{white}] " + color + str(data)).format(
+        	white=w, green=g
+    	)
 
 def Request(website, _timeout=None, _encode=None):
     """
