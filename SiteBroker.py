@@ -25,6 +25,7 @@ from insides import *
 from modules import Cloudflare
 from modules import GoogleCrawl, BingCrawl, ManualCrawl
 from modules import reverseViaHT, reverseViaYGS, whoIS
+from modules import browserspyRep
 
 import re 
 
@@ -113,5 +114,8 @@ print(Banner)
 # heading(heading="Doing Reverse IP OF", website="http://umarshah.tk", afterWebHead=" Via HT <3", color=g)
 # reverseViaHT("http://umararfeen.com")
 
-heading(heading="Doing WhoIS OF", website="http://umararfeen.com", afterWebHead="", color=w)
-whoIS("umararfeen.com")
+# heading(heading="Doing WhoIS OF", website="http://umararfeen.com", afterWebHead="", color=w)
+# whoIS("umararfeen.com")
+
+# heading(heading="Generating BrowserSpyReport Of", website="http://umararfeen.com", afterWebHead="", color=w)
+# browserspyRep("umararfeen.com")
