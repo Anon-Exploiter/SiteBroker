@@ -1,9 +1,3 @@
-# $url = 'http://browserspy.dk/webserver.php';
-
-# 	$data = 
-# 	array(
-# 		'server' => $website
-# 	);
 from bs4 import BeautifulSoup
 from insides.colors import *
 from insides.functions import _headers, write, Request, removeHTTP, addHTTP

@@ -5,4 +5,5 @@ from crawler import manualCrawl as ManualCrawl
 from reverseip import reverseViaHT, reverseViaYGS
 from whois import whoIS
 from browserspy import browserspyRep
+from nameservers import nameServers
 from insides import *

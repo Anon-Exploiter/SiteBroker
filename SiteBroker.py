@@ -26,6 +26,7 @@ from modules import Cloudflare
 from modules import GoogleCrawl, BingCrawl, ManualCrawl
 from modules import reverseViaHT, reverseViaYGS, whoIS
 from modules import browserspyRep
+from modules import nameServers
 
 import re 
 
@@ -99,6 +100,9 @@ print(Banner)
 #     Cloudflare(website)
 #     print(Footer)
 
+# heading(heading="Checking For Cloudflare Bypass Of", website="http://hack.me", afterWebHead="", color=c)
+# Cloudflare("http://hack.me", _verbose=True)
+
 # heading(heading="Crawling", website="http://umarshah.tk", afterWebHead=" Via Google", color=c)
 # GoogleCrawl("http://umarshah.tk")
 
@@ -119,3 +123,7 @@ print(Banner)
 
 # heading(heading="Generating BrowserSpyReport Of", website="http://umararfeen.com", afterWebHead="", color=w)
 # browserspyRep("umararfeen.com")
+
+# heading(heading="Finding Nameservers Of", website="http://umararfeen.com", afterWebHead="", color=w)
+# nameServers("http://umararfeen.com")
+
