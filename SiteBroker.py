@@ -24,9 +24,10 @@ _______________.___.
 from insides import *
 from modules import Cloudflare
 from modules import GoogleCrawl, BingCrawl, ManualCrawl
-from modules import reverseViaHT, reverseViaYGS, whoIS
-from modules import browserspyRep
-from modules import nameServers
+from modules import reverseViaHT, reverseViaYGS
+from modules import whoIS, browserspyRep
+from modules import nameServers, websiteSpeed
+from modules import findSubdomains, findShells, findAdminPanel
 
 import re 
 
@@ -126,4 +127,13 @@ print(Banner)
 
 # heading(heading="Finding Nameservers Of", website="http://umararfeen.com", afterWebHead="", color=w)
 # nameServers("http://umararfeen.com")
+
+# heading(heading="Finding Loading Speed Of", website="http://umararfeen.com", afterWebHead="", color=r)
+# websiteSpeed("umararfeen.com")
+
+# heading(heading="Finding SubDomains Of", website="http://umararfeen.com", afterWebHead="", color=c)
+# findSubdomains("http://umararfeen.com")
+
+# heading(heading="Finding Admin Panel Of", website="http://umararfeen.com", afterWebHead="", color=c)
+# findAdminPanel("http://umararfeen.com")
 
