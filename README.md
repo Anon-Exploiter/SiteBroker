@@ -3,6 +3,9 @@
 
 <img src="https://i.imgur.com/9KubVzA.png" />
 
+# Output
+<a href="https://github.com/Anon-Exploiter/Rough_Work/blob/master/SiteBroker_Output" target="_blank">Sitebroker's Full Output</a>
+
 ### Requirements
 
 - Python (2 or 3)
