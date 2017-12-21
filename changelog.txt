@@ -1,4 +1,16 @@
-Version ==> 4.0(Current Version):
+Version ==> 5.0(Current Version):
+
+1). Changed The Whole Script Into Python (Took Much Time :P)
+2). Added New Features For Reverse IP (Via HackerTarget && YouGetSignal)
+3). Added New Features For Crawling (Via Google, Bing && Manually With My Hands ;)
+4). Removed NetCraft Module as We need to use selinium and phantomJS for it (Ultimately making script slow!)
+5). Added New Method For Subdomains Scanning! (Takes Some Time Though :p)
+6). Exceptions Covered for both User Interrupting && Internel Issues!
+
+______________________________________________________________________________________________________________________
+
+
+Version ==> 4.0(Removed):
 
 1). Fixed Some Major Issues.
 2). Fixed WhoIS Issue of Not Loading The WhoIS File.
@@ -10,7 +22,7 @@ Version ==> 4.0(Current Version):
 
 ______________________________________________________________________________________________________________________
 
-Version ==> 3.0 (Old Version):
+Version ==> 3.0 (Removed):
 
 BugFixes:
 1). Fixed Crawler Opening And Finding.
@@ -21,7 +33,7 @@ Nothing Till Now :)
 
 ______________________________________________________________________________________________________________________
 
-Version ==> 2.0 (Old Version):
+Version ==> 2.0 (Removed):
 
 BugFixes:
 1). Directory Listing Problem Solved.
@@ -36,5 +48,5 @@ Whats New:
 
 ______________________________________________________________________________________________________________________
 
-Version ==> 1.0 (Old Version):
+Version ==> 1.0 (Removed):
 The Version Under Which It Was Made.
