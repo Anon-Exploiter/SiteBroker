@@ -91,4 +91,7 @@ P.S ~ Dont Change The Colors. They're Butiphul like this.
 P.S.S ~ Lets Take A Look At More Screenshots ^_^</code></pre>
 <img src="https://i.imgur.com/RSrESbB.png" />
 <img src="https://i.imgur.com/sBZ0n5i.png" />
-<img src="https://i.imgur.com/sBZ0n5i.png" />
+<img src="https://i.imgur.com/a6DsVOP.png" />
+<img src="https://i.imgur.com/noKnHfJ.png" />
+<img src="https://i.imgur.com/3iIdnto.png" />
+<img src="https://i.imgur.com/cjS9SOV.png" />
