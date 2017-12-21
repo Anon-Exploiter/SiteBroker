@@ -62,7 +62,7 @@ A cross-platform python based utility to penetrate websites and test them with a
 
 Options:
 
- 1). Cloudlfare Bypass. 
+ 1). Cloudflare Bypass. 
  2). Website Crawler.
   	 |____ Google Based Crawling
  	 |____ Bing Based Crawling
