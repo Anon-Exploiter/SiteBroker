@@ -1,0 +1,5 @@
+colorama
+lxml
+bs4
+requests
+dnspython
