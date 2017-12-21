@@ -14,16 +14,18 @@ def cloudflare(website, _verbose=None):
         req = "http://www.crimeflare.biz/cgi-bin/cfsearch.cgi"
         pos = {'cfS': website}
         res = requests.post(req, headers=_headers, data=pos).text.encode('utf-8')
-        reg = re.findall('<a href=\"http://www.crimeflare.biz/(.*?)">(.*?)</a>', res)
-        lis = []
-        for x in reg[1]:
-            lis.append(x)
-        real_ip = lis[1]
+        real_ip = None
+        if re.findall(r'\d+\.\d+\.\d+\.\d+', res):
+            reg = re.findall(r'\d+\.\d+\.\d+\.\d+', res)
+            real_ip = reg[1]
+        else:
+            write(var="!", color=r, data="Sorry! Cloudflare Wasn't Bypassed :')")
         request = Request("http://" + str(real_ip), _timeout=3, _encode=True)
         if not "cloudflare" in request.lower():
             if _verbose != None:
-                write(var="@", color=c, data="Cloudflare Bypassed!")
-                write(var="~", color=g, data="Real IP --> " + fc +str(real_ip))
+                if real_ip != None:
+                    write(var="@", color=c, data="Cloudflare Bypassed!")
+                    write(var="~", color=g, data="Real IP --> " + fc +str(real_ip))
             return(str(real_ip))
         else:
             if _verbose != None:
