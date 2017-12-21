@@ -16,27 +16,8 @@ _______________.___.
                                              ~ An0n 3xPloiTeR :)
 """
 
-import os
-
-def installPackages(lib):
-    import importlib
-    try:
-        importlib.import_module(lib)
-    except ImportError:
-        import pip
-        pip.main(['install', lib])
-    finally:
-        try:
-            globals()[lib] = importlib.import_module(lib)
-        except ImportError, e:
-            print "\nErr0r: Kindly Report This Error To Admin: \n", str(e)
-
-pack = ["colorama", "os"]
-
-for packages in pack:
-    installPackages(packages)
-
 from colorama import init,Fore,Back,Style
+import os
 
 
 if os.name == "posix":

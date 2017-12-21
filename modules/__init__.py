@@ -1,3 +1,4 @@
+from insides 		import *
 from cloudflare 	import cloudflare 	as Cloudflare
 from crawler 		import googleCrawl 	as GoogleCrawl
 from crawler 		import bingCrawl 	as BingCrawl
@@ -11,4 +12,4 @@ from webspeed 		import websiteSpeed
 from subdomains 	import findSubdomains
 from shells 		import findShells
 from adminpanel 	import findAdminPanel
-from insides 		import *
+from banner 		import grabBanner

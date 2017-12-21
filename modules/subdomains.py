@@ -8,9 +8,7 @@ subdomains = ["www", "mail", "ftp", "localhost", "webmail", "smtp", "pop", "ns1"
 
 def findSubdomains(website):
 	website = removeHTTP(website)
-	# print("{}=".format(w) * 70)
 	print("{}{:<62}| {:<50}".format(c, "URL", "STATUS"))
-	# print("{}=".format(w) * 70)
 	for _sub in subdomains:
 		if len(_sub) != 0:
 			combo = _sub + "." + website; combo = addHTTP(combo)

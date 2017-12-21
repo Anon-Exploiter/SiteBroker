@@ -20,26 +20,16 @@ _______________.___.
         ################################   Importing Packages   ################################ 
 #####################################################################################################
 
-# from insides import Banner, Footer
 from insides import *
-from modules import Cloudflare
-from modules import GoogleCrawl, BingCrawl, ManualCrawl
-from modules import reverseViaHT, reverseViaYGS
-from modules import whoIS, browserspyRep
-from modules import nameServers, websiteSpeed
-from modules import findSubdomains, findShells, findAdminPanel
+from modules import BingCrawl,      browserspyRep
+from modules import Cloudflare,     findSubdomains
+from modules import findShells,     findAdminPanel
+from modules import GoogleCrawl,    grabBanner
+from modules import ManualCrawl,    nameServers
+from modules import reverseViaHT,   reverseViaYGS
+from modules import whoIS,          websiteSpeed
 
-import re 
-
-#####################################################################################################
-        ################################   Some Errors!   ################################ 
-#####################################################################################################
-
-empty_Website = "\n{red}[=] Please Enter A Website :/\n\t{cyan}~ An0n 3xPloiTeR :)".format(red=r, cyan=c)
-
-wrong_URL = "\n{red}[=] Please Enter a Valid And Correct URL (i.e, hackthissite.org, hack.me)\n\t{cyan}~ An0n 3xPloiTeR :)".format(red=r, cyan=c)
-
-str_Index = "\n{red}[=] Please Input a Integer (i.e, 1, 2, 3) :\\\n\t{cyan}~ An0n 3xPloiTeR :)".format(red=r, cyan=c)
+import re
 
 #####################################################################################################
         ################################   Some Variables!   ################################ 
@@ -58,6 +48,11 @@ _headers = {
 user_agent = "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.17 Safari/537.36"
 
 header = {'User-Agent' : user_agent}
+
+val_Select = "\t{}[$] Please Use The Index Value From The List\n\t\t[+] Not By Your Own :/\n\t\t\t ~ An0n 3xPloiTeR  \n".format(r)
+
+str_Index = "\n\t{red}[=] Please Input a Integer (i.e, 1, 2, 3) :\\\n\t\t{cyan}~ An0n 3xPloiTeR :)".format(red=r, cyan=c)
+
 
 #####################################################################################################
         ################################   Built-IN Functions   ################################ 
@@ -86,54 +81,183 @@ print(Banner)
 
 #####################################################################################################
 
-# website = raw_input("\n{blue}[$] Please Enter The Website You Want To Scan {red}(i.e, hackthissite.org, hack.me): ".format(blue=b, red=r)); website=addHTTP(website)
+website = raw_input("\n{blue}[$] Please Enter The Website You Want To Scan {red}(i.e, hackthissite.org, hack.me): ".format(blue=b, red=r)); website=addHTTP(website)
 
-# print("\n{green}[@] What You Wanna Do With The Given Website ? \n\n1). Cloudflare Check / Bypass. \n2). Website Crawler.\n3). Reverse IP.\n4). Information Gathering.\n5). Nameservers.\n6). WebSite Speed.\n7). Subdomains Scanner.\n8). Shell Finder.\n9). Admin Panel Finder.\n10). Grab Banner.\n11). All Things.\n".format(green=g)) # Options
+print("\n{green}[@] What You Wanna Do With The Given Website ? \n\n1). Cloudflare Check / Bypass. \n2). Website Crawler.\n3). Reverse IP.\n4). Information Gathering.\n5). Nameservers.\n6). WebSite Speed.\n7). Subdomains Scanner.\n8). Shell Finder.\n9). Admin Panel Finder.\n10). Grab Banner.\n11). All Things.\n".format(green=g)) # Options
 
-# index = int(InDex())
+index = int(InDex())
 
 #####################################################################################################
         ################################   Real Shit   ################################ 
 #####################################################################################################
 
-# if index == 1:
-#     heading(heading="Checking For Cloudflare Bypass Of", website=website, color=c)
-#     Cloudflare(website)
-#     print(Footer)
+try:
+    if index == 1:
+        heading(heading="Checking For Cloudflare Bypass Of", website=website, afterWebHead="", color=c)
+        Cloudflare(website, _verbose=True)
+        print(Footer)
 
-# heading(heading="Checking For Cloudflare Bypass Of", website="http://hack.me", afterWebHead="", color=c)
-# Cloudflare("http://hack.me", _verbose=True)
+    elif index == 2:
+        print("\n{}[$] With Which Method You Wanna Crawl ?\n\n{}1). Google Based Crawler. \n{}2). Bing Based Crawler.\n{}3). Manual Crawler.\n{}4). All Things.\n".format(b, g, y, c, r))
+        _index = int(InDex())
 
-# heading(heading="Crawling", website="http://umarshah.tk", afterWebHead=" Via Google", color=c)
-# GoogleCrawl("http://umarshah.tk")
+        if _index == 1:
+            heading(heading="Crawling", website=website, afterWebHead=" Via Google", color=c)
+            GoogleCrawl(website)
+            print(Footer)
 
-# heading(heading="Crawling", website="http://umarshah.tk", afterWebHead=" Via Bing", color=b)
-# BingCrawl("http://umarshah.tk")
+        elif _index == 2:
+            heading(heading="Crawling", website=website, afterWebHead=" Via Bing", color=b)
+            BingCrawl(website)
+            print(Footer)
 
-# heading(heading="Crawling", website="http://umarshah.tk", afterWebHead=" Manually :)", color=c)
-# ManualCrawl("http://umarshah.tk")
+        elif _index == 3:
+            heading(heading="Crawling", website=website, afterWebHead=" Manually :)", color=c)
+            ManualCrawl(website)
+            print(Footer)
 
-# heading(heading="Doing Reverse IP OF", website="http://umarshah.tk", afterWebHead=" Via YGS!", color=c)
-# reverseViaYGS("http://umararfeen.com")
+        elif _index == 4:
+            heading(heading="Crawling", website=website, afterWebHead=" Via Google", color=c)
+            GoogleCrawl(website)
 
-# heading(heading="Doing Reverse IP OF", website="http://umarshah.tk", afterWebHead=" Via HT <3", color=g)
-# reverseViaHT("http://umararfeen.com")
+            heading(heading="Crawling", website=website, afterWebHead=" Via Bing", color=b)
+            BingCrawl(website)
 
-# heading(heading="Doing WhoIS OF", website="http://umararfeen.com", afterWebHead="", color=w)
-# whoIS("umararfeen.com")
+            heading(heading="Crawling", website=website, afterWebHead=" Manually :)", color=c)
+            ManualCrawl(website)
+            print(Footer)
 
-# heading(heading="Generating BrowserSpyReport Of", website="http://umararfeen.com", afterWebHead="", color=w)
-# browserspyRep("umararfeen.com")
+        else:
+            exit(val_Select)
 
-# heading(heading="Finding Nameservers Of", website="http://umararfeen.com", afterWebHead="", color=w)
-# nameServers("http://umararfeen.com")
+    elif index == 3:
+        print("\n{}[$] With Which Method You Wanna Do Reverse IP ?\n\n{}1). Hacker Target Based. \n{}2). YouGetSignal Based.\n{}3). All Things.\n".format(b, g, y, c))
+        _index = int(InDex())
 
-# heading(heading="Finding Loading Speed Of", website="http://umararfeen.com", afterWebHead="", color=r)
-# websiteSpeed("umararfeen.com")
+        if _index == 1:
+            heading(heading="Doing Reverse IP OF", website=website, afterWebHead=" Via HT <3", color=g)
+            reverseViaHT(website)
+            print(Footer)
 
-# heading(heading="Finding SubDomains Of", website="http://umararfeen.com", afterWebHead="", color=c)
-# findSubdomains("http://umararfeen.com")
+        elif _index == 2:
+            heading(heading="Doing Reverse IP OF", website=website, afterWebHead=" Via YGS!", color=c)
+            reverseViaYGS(website)
+            print(Footer)
 
-# heading(heading="Finding Admin Panel Of", website="http://umararfeen.com", afterWebHead="", color=c)
-# findAdminPanel("http://umararfeen.com")
+        elif _index == 3:
+            heading(heading="Doing Reverse IP OF", website=website, afterWebHead=" Via HT <3", color=g)
+            reverseViaHT(website)
 
+            heading(heading="Doing Reverse IP OF", website=website, afterWebHead=" Via YGS!", color=c)
+            reverseViaYGS(website)
+            print(Footer)
+
+        else:
+            exit(val_Select)
+
+    elif index == 4:
+        print("\n{}[$] With Which Method You Wanna Do Information Gathering ?\n\n{}1). Whois Lookup. \n{}2). BrowserSpy Report.\n{}3). All Things.\n".format(g, b, y, c))
+        _index = int(InDex())
+
+        if _index == 1:
+            heading(heading="Doing Whois Lookup OF", website=website, afterWebHead=" Via WApi", color=w)
+            whoIS(website)
+            print(Footer)
+
+        elif _index == 2:
+            heading(heading="Generating BrowserSpyReport Of", website=website, afterWebHead="", color=w)
+            browserspyRep(website)
+            print(Footer)
+
+        elif _index == 3:
+            heading(heading="Doing Whois Lookup OF", website=website, afterWebHead=" Via WApi", color=w)
+            whoIS(website)
+
+            heading(heading="Generating BrowserSpyReport Of", website=website, afterWebHead="", color=w)
+            browserspyRep(website)
+            print(Footer)
+
+        else:
+            exit(val_Select)
+
+    elif index == 5:
+        heading(heading="Finding Nameservers Of", website=website, afterWebHead="", color=w)
+        nameServers(website)
+        print(Footer)
+
+    elif index == 6:
+        heading(heading="Finding Loading Speed Of", website=website, afterWebHead="", color=r)
+        websiteSpeed(website)
+        print(Footer)
+
+    elif index == 7:
+        heading(heading="Finding SubDomains Of", website=website, afterWebHead="", color=c)
+        findSubdomains(website)
+        print(Footer)
+
+    elif index == 8:
+        heading(heading="Finding Shells Of", website=website, afterWebHead="", color=c)
+        findShells(website)
+        print(Footer)
+
+    elif index == 9:
+        heading(heading="Finding Admin Panel Of", website=website, afterWebHead="", color=c)
+        findAdminPanel(website)
+        print(Footer)
+
+    elif index == 10:
+        heading(heading="Grabbing Banner Of", website=website, afterWebHead="", color=g)
+        grabBanner(website)
+        print(Footer)
+
+    elif index == 11:
+        heading(heading="Crawling", website=website, afterWebHead=" Via Google", color=c)
+        GoogleCrawl(website)
+
+        heading(heading="Crawling", website=website, afterWebHead=" Via Bing", color=b)
+        BingCrawl(website)
+
+        heading(heading="Crawling", website=website, afterWebHead=" Manually :)", color=c)
+        ManualCrawl(website)
+
+        heading(heading="Doing Reverse IP OF", website=website, afterWebHead=" Via HT <3", color=g)
+        reverseViaHT(website)
+
+        heading(heading="Doing Reverse IP OF", website=website, afterWebHead=" Via YGS!", color=c)
+        reverseViaYGS(website)
+
+        heading(heading="Doing Whois Lookup OF", website=website, afterWebHead=" Via WApi", color=w)
+        whoIS(website)
+
+        heading(heading="Generating BrowserSpyReport Of", website=website, afterWebHead="", color=w)
+        browserspyRep(website)
+
+        heading(heading="Finding Nameservers Of", website=website, afterWebHead="", color=w)
+        nameServers(website)
+
+        heading(heading="Finding Loading Speed Of", website=website, afterWebHead="", color=r)
+        websiteSpeed(website)
+
+        heading(heading="Finding SubDomains Of", website=website, afterWebHead="", color=c)
+        findSubdomains(website)
+
+        heading(heading="Finding Shells Of", website=website, afterWebHead="", color=c)
+        findShells(website)
+
+        heading(heading="Finding Admin Panel Of", website=website, afterWebHead="", color=c)
+        findAdminPanel(website)
+
+        heading(heading="Grabbing Banner Of", website=website, afterWebHead="", color=g)
+        grabBanner(website)
+        print(Footer)
+        
+    else:
+        exit(val_Select)
+
+except KeyboardInterrupt:
+    write(var="~", color=w, data="Err0r: User Interrupted!")
+    print(Footer)
+
+except Exception, e:
+    write(var="#", color=r, data="Err0r: Kindly Report This err0r to An0n3xPloiTeR :) (If Your Internet's Working ;)\n" + str(e))
+    print(Footer)
