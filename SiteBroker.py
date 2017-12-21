@@ -29,8 +29,6 @@ from modules import ManualCrawl,    nameServers
 from modules import reverseViaHT,   reverseViaYGS
 from modules import whoIS,          websiteSpeed
 
-import re
-
 #####################################################################################################
         ################################   Some Variables!   ################################ 
 #####################################################################################################
