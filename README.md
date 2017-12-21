@@ -51,7 +51,7 @@ You can download the latest version of SiteBroker by cloning the GitHub reposito
 ### Advanced Usage
 
 <pre><code>
-Author: Syed Umar Arfeen (<a href="https://www.facebook.com/0x556d6172">An0n 3xPloiTeR</a>)
+Author: Syed Umar Arfeen (<a href="https://www.facebook.com/0x556d6172" target="_blank">An0n 3xPloiTeR</a>)
 
 Usage: python SiteBroker.py
 A cross-platform python based utility to penetrate websites and test them with approximately every angle.
@@ -88,3 +88,6 @@ P.S ~ Dont Change The Colors. They're Butiphul like this.
 		~ An0n 3xPloiTeR
 
 P.S.S ~ Lets Take A Look At More Screenshots ^_^</code></pre>
+<img src="https://i.imgur.com/RSrESbB.png" />
+<img src="https://i.imgur.com/sBZ0n5i.png" />
+<img src="https://i.imgur.com/sBZ0n5i.png" />
