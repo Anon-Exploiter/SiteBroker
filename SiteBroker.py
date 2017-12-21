@@ -211,6 +211,9 @@ try:
         print(Footer)
 
     elif index == 11:
+        heading(heading="Checking For Cloudflare Bypass Of", website=website, afterWebHead="", color=y)
+        Cloudflare(website, _verbose=True)
+
         heading(heading="Crawling", website=website, afterWebHead=" Via Google", color=c)
         GoogleCrawl(website)
 
