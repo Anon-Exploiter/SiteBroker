@@ -18,7 +18,7 @@
 
 ### Install modules
 
-	pip install -r packages.txt
+	pip install -r requirements.txt
 	
 ### Tested on
 
