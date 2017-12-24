@@ -96,7 +96,9 @@ Options:
 P.S ~ Dont Change The Colors. They're Butiphul like this.
 	~ An0n 3xPloiTeR
 
-P.S.S ~ Lets Take A Look At More Screenshots ^_^</code></pre>
+</code></pre>
+
+P.S.S ~ Lets Take A Look At More Screenshots ^_^
 <img src="https://i.imgur.com/RSrESbB.png" />
 <img src="https://i.imgur.com/sBZ0n5i.png" />
 <img src="https://i.imgur.com/a6DsVOP.png" />
