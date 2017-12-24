@@ -41,6 +41,7 @@ You can download the latest version of SiteBroker by cloning the GitHub reposito
 - Changed The Whole Script Into Python (Previously It Was Written In PHP)
 - Exceptions Covered for both User Interrupting && Internel Issues!
 - Removed NetCraft Module as We need to use selinium and phantomJS for it (Ultimately making script slow!)
+- Changed the Problem Of Responce Code Of '200' for most sites in Admin Panel Finder Module && Shell Finder Module
 
 
 ### Change-log
