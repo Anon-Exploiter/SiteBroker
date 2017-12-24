@@ -101,7 +101,7 @@ Options:
 <img src="https://i.imgur.com/cjS9SOV.png" />
 
 ### Note 
-<pre><code>Do not change the position of any argument as given under the Usage, this may cause an error or failure in the working of the script...
+<pre><code>Do not change the position of any module as given under the Usage, this may cause an failure in the working of the script...
 P.S ~ Dont Change The Colors. They're Butiphul like this.
 	~ An0n 3xPloiTeR
 </code></pre>
