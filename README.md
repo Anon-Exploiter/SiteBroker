@@ -91,14 +91,6 @@ Options:
 	python SiteBroker.py
 </code></pre>
 
-
-### Note 
-<pre><code>Do not change the position of any argument as given under the Usage, this may cause an error or failure in the working of the script...
-P.S ~ Dont Change The Colors. They're Butiphul like this.
-	~ An0n 3xPloiTeR
-
-</code></pre>
-
 ### Screenshots
 
 <img src="https://i.imgur.com/RSrESbB.png" />
@@ -107,3 +99,9 @@ P.S ~ Dont Change The Colors. They're Butiphul like this.
 <img src="https://i.imgur.com/noKnHfJ.png" />
 <img src="https://i.imgur.com/3iIdnto.png" />
 <img src="https://i.imgur.com/cjS9SOV.png" />
+
+### Note 
+<pre><code>Do not change the position of any argument as given under the Usage, this may cause an error or failure in the working of the script...
+P.S ~ Dont Change The Colors. They're Butiphul like this.
+	~ An0n 3xPloiTeR
+</code></pre>
