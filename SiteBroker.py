@@ -79,7 +79,7 @@ print(Banner)
 
 #####################################################################################################
 
-website = raw_input("\n{blue}[$] Please Enter The Website You Want To Scan {red}(i.e, hackthissite.org, hack.me): ".format(blue=b, red=r)); website=addHTTP(website)
+website = raw_input("\n{blue}[$] Please Enter The Website You Want To Scan {red}(i.e, hackthissite.org, hack.me): {none}".format(blue=b, red=r, none=y)); website=addHTTP(website)
 
 print("\n{green}[@] What You Wanna Do With The Given Website ? \n\n1). Cloudflare Check / Bypass. \n2). Website Crawler.\n3). Reverse IP.\n4). Information Gathering.\n5). Nameservers.\n6). WebSite Speed.\n7). Subdomains Scanner.\n8). Shell Finder.\n9). Admin Panel Finder.\n10). Grab Banner.\n11). All Things.\n".format(green=g)) # Options
 
@@ -93,7 +93,6 @@ try:
     if index == 1:
         heading(heading="Checking For Cloudflare Bypass Of", website=website, afterWebHead="", color=c)
         Cloudflare(website, _verbose=True)
-        print(Footer)
 
     elif index == 2:
         print("\n{}[$] With Which Method You Wanna Crawl ?\n\n{}1). Google Based Crawler. \n{}2). Bing Based Crawler.\n{}3). Manual Crawler.\n{}4). All Things.\n".format(b, g, y, c, r))
@@ -102,17 +101,14 @@ try:
         if _index == 1:
             heading(heading="Crawling", website=website, afterWebHead=" Via Google", color=c)
             GoogleCrawl(website)
-            print(Footer)
 
         elif _index == 2:
             heading(heading="Crawling", website=website, afterWebHead=" Via Bing", color=b)
             BingCrawl(website)
-            print(Footer)
 
         elif _index == 3:
             heading(heading="Crawling", website=website, afterWebHead=" Manually :)", color=c)
             ManualCrawl(website)
-            print(Footer)
 
         elif _index == 4:
             heading(heading="Crawling", website=website, afterWebHead=" Via Google", color=c)
@@ -123,7 +119,6 @@ try:
 
             heading(heading="Crawling", website=website, afterWebHead=" Manually :)", color=c)
             ManualCrawl(website)
-            print(Footer)
 
         else:
             exit(val_Select)
@@ -135,12 +130,10 @@ try:
         if _index == 1:
             heading(heading="Doing Reverse IP OF", website=website, afterWebHead=" Via HT <3", color=g)
             reverseViaHT(website)
-            print(Footer)
 
         elif _index == 2:
             heading(heading="Doing Reverse IP OF", website=website, afterWebHead=" Via YGS!", color=c)
             reverseViaYGS(website)
-            print(Footer)
 
         elif _index == 3:
             heading(heading="Doing Reverse IP OF", website=website, afterWebHead=" Via HT <3", color=g)
@@ -148,7 +141,6 @@ try:
 
             heading(heading="Doing Reverse IP OF", website=website, afterWebHead=" Via YGS!", color=c)
             reverseViaYGS(website)
-            print(Footer)
 
         else:
             exit(val_Select)
@@ -160,12 +152,10 @@ try:
         if _index == 1:
             heading(heading="Doing Whois Lookup OF", website=website, afterWebHead=" Via WApi", color=w)
             whoIS(website)
-            print(Footer)
 
         elif _index == 2:
             heading(heading="Generating BrowserSpyReport Of", website=website, afterWebHead="", color=w)
             browserspyRep(website)
-            print(Footer)
 
         elif _index == 3:
             heading(heading="Doing Whois Lookup OF", website=website, afterWebHead=" Via WApi", color=w)
@@ -173,7 +163,6 @@ try:
 
             heading(heading="Generating BrowserSpyReport Of", website=website, afterWebHead="", color=w)
             browserspyRep(website)
-            print(Footer)
 
         else:
             exit(val_Select)
@@ -181,32 +170,26 @@ try:
     elif index == 5:
         heading(heading="Finding Nameservers Of", website=website, afterWebHead="", color=w)
         nameServers(website)
-        print(Footer)
 
     elif index == 6:
         heading(heading="Finding Loading Speed Of", website=website, afterWebHead="", color=r)
         websiteSpeed(website)
-        print(Footer)
 
     elif index == 7:
         heading(heading="Finding SubDomains Of", website=website, afterWebHead="", color=c)
-        findSubdomains(website)
-        print(Footer)
+        findSubdomains(website)     
 
     elif index == 8:
         heading(heading="Finding Shells Of", website=website, afterWebHead="", color=c)
-        findShells(website)
-        print(Footer)
+        findShells(website)        
 
     elif index == 9:
         heading(heading="Finding Admin Panel Of", website=website, afterWebHead="", color=c)
         findAdminPanel(website)
-        print(Footer)
 
     elif index == 10:
         heading(heading="Grabbing Banner Of", website=website, afterWebHead="", color=g)
-        grabBanner(website)
-        print(Footer)
+        grabBanner(website)        
 
     elif index == 11:
         heading(heading="Checking For Cloudflare Bypass Of", website=website, afterWebHead="", color=y)
@@ -250,18 +233,18 @@ try:
 
         heading(heading="Grabbing Banner Of", website=website, afterWebHead="", color=g)
         grabBanner(website)
-        print(Footer)
         
     else:
         exit(val_Select)
 
 except KeyboardInterrupt:
     write(var="~", color=w, data="Err0r: User Interrupted!")
-    print(Footer)
+    
 
 except Exception, e:
     write(var="#", color=r, data="Err0r: Kindly Report the err0r below to An0n3xPloiTeR :) (If Your Internet's Working ;)\n\"\"\"\n" + str(e) + "\n\"\"\"")
-    print(Footer)
+
+print(Footer)
 
 # See Ya!
 # An0n 3xPloiTeR :)
