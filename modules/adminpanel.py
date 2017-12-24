@@ -30,11 +30,14 @@ def findAdminPanel(website):
 		if len(_panels) != 0:
 			combo = website + "/" + _panels
 			try:
-				resp = requests.get(combo, timeout=5, headers=_headers).status_code
-				if resp != 404:
+				resp = requests.get(combo, timeout=5, headers=_headers, allow_redirects=False).status_code
+				if resp == 200:
 					print("{}{:<92}| {:<50}".format(g, combo, resp))
+				elif resp == 301:
+					print("{}{:<92}| {:<50}".format(r, combo, "404"))
+				elif resp == 500 or resp == 502:
+					print("{}{:<92}| {:<50}".format(c, combo, "404"))
 				else:
 					print("{}{:<92}| {:<50}".format(r, combo, "404"))
-
 			except Exception:
 				print("{}{:<92}| {:<50}".format(r, combo, "404"))
