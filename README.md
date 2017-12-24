@@ -1,7 +1,6 @@
 # SiteBroker
-===
-
 [![python](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org/downloads/)
+
 **A cross-platform python based utility to penetrate websites and test them with approximately every angle.**
 
 <img src="https://i.imgur.com/9KubVzA.png" />
