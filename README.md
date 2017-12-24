@@ -13,7 +13,7 @@
 
 ### Requirements
 
-- Python (2 or 3)
+- Python (2.7.*)
 - Python `pip`
 - Python module `requests`
 - Python module `colorama`
