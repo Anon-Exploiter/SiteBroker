@@ -2,6 +2,8 @@
 [![Build Status](https://semaphoreapp.com/api/v1/projects/d4cca506-99be-44d2-b19e-176f36ec8cf1/128505/shields_badge.svg)](https://semaphoreapp.com/boennemann/badges)
 [![python](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org/downloads/)
 [![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=6.0&x2=0)](http://badge.fury.io/gh/boennemann%2Fbadges)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
 **A cross-platform python based utility to penetrate websites and test them with approximately every angle.**
 
