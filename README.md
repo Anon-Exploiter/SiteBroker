@@ -4,7 +4,7 @@
 [![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=6&v=6.0&x2=0)](http://badge.fury.io/gh/boennemann%2Fbadges)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
-**A cross-platform python based utility to penetrate websites and test them with approximately every angle.**
+**A cross-platform python based utility for information gathering and penetration automation!**
 
 <img src="https://i.imgur.com/9KubVzA.png" />
 
