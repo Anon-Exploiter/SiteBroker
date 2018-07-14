@@ -64,7 +64,7 @@ You can download the latest version of SiteBroker by cloning the GitHub reposito
 Author: Syed Umar Arfeen (<a href="https://www.facebook.com/0x556d6172" target="_blank">An0n 3xPloiTeR</a>)
 
 Usage: python SiteBroker.py
-A cross-platform python based utility to penetrate websites and test them with approximately every angle.
+A cross-platform python based utility for information gathering and penetration automation!
 
 Options:
 
