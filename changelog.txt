@@ -1,4 +1,11 @@
-Version ==> 6.0(Current Version):
+Version ==> 6.0.1(Current Version):
+
+1). There aren't any new features, in this version.
+2). Resolved `whois` exception (due to API key), replaced it with an alternate website! 
+
+______________________________________________________________________________________________________________________
+
+Version ==> 6.0.1(Old Version):
 
 1). Changed the Responce Code Of 200 for most sites(because of their redir. mechanism) in Admin Panel Finder Module
 2). Did The Same Above For Shell Finder Module!
