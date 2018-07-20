@@ -28,7 +28,7 @@ def whoIS(website):
 	try:
 		request 	= Request(url, _timeout=5, _encode=None)
 		bs 		= BeautifulSoup(request, 'html.parser')
-		result 		= bs.find_all('pre', {'class': 'df-araw'})[0].text.encode('UTF-8')
+		result 		= bs.find_all('pre', {'class': 'df-raw'})[0].text.encode('UTF-8')
 		print("\r{output}".format(output=c + result))
 	except:
 		write(var="!", color=r, data="Sorry, whois cannot be performed right now! :[")
