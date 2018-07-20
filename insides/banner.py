@@ -28,7 +28,7 @@ banner = """
 |  $$$$$$/| $$  |  $$$$/|  $$$$$$$| $$$$$$$/| $$      |  $$$$$$/| $$ \  $$|  $$$$$$$| $$      
  \______/ |__/   \___/   \_______/|_______/ |__/       \______/ |__/  \__/ \_______/|__/  {blue}~ By Syed Umar Arfeen (An0n 3xPloiTeR)
 
-{yellow}Greetz ~ {green}Makman <3{red} | Jokr HaXoR{yellow} | An0nGuy{blue} | Shariq Malik{cyan} | r0oth3x49{yellow} | inj3ctor 0sman""".format(
+{yellow}Greetz ~ {red}Makman <3{green} | Jokr HaXoR{yellow} | An0nGuy{blue} | Shariq Malik{cyan} | r0oth3x49{yellow} | inj3ctor 0sman""".format(
     green = fg + sb,
     blue = fb + sb,
     yellow = fy + sb,
