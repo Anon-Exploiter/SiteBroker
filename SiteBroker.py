@@ -150,7 +150,7 @@ try:
         _index = int(InDex())
 
         if _index == 1:
-            heading(heading="Doing Whois Lookup OF", website=website, afterWebHead=" Via WApi", color=w)
+            heading(heading="Doing Whois Lookup OF", website=website, afterWebHead="", color=w)
             whoIS(website)
 
         elif _index == 2:
@@ -158,7 +158,7 @@ try:
             browserspyRep(website)
 
         elif _index == 3:
-            heading(heading="Doing Whois Lookup OF", website=website, afterWebHead=" Via WApi", color=w)
+            heading(heading="Doing Whois Lookup OF", website=website, afterWebHead="", color=w)
             whoIS(website)
 
             heading(heading="Generating BrowserSpyReport Of", website=website, afterWebHead="", color=w)
