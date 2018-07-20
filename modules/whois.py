@@ -31,7 +31,7 @@ def whoIS(website):
 		result 		= bs.find_all('pre', {'class': 'df-raw'})[0].text.encode('UTF-8')
 		print("\r{output}".format(output=c + result))
 	except:
-		write(var="!", color=r, data="Sorry, whois cannot be performed right now! :[")
+		write(var="!", color=r, data="Sorry, whois cannot be performed right now...!!! :[")
 
 
 ## Lazy to add a new API key. So, added an good alternate method above! xD
