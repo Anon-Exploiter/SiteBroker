@@ -8,7 +8,7 @@
 
 <img src="https://i.imgur.com/9KubVzA.png" />
 
-# Output
+### Output
 <a href="https://github.com/Anon-Exploiter/SiteBroker/blob/master/output.txt" target="_blank">Sitebroker's Full Output</a>
 
 ### Requirements
