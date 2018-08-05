@@ -5,7 +5,7 @@ Version ==> 6.0.1(Current Version):
 
 ______________________________________________________________________________________________________________________
 
-Version ==> 6.0.1(Old Version):
+Version ==> 6.0.0(Old Version):
 
 1). Changed the Responce Code Of 200 for most sites(because of their redir. mechanism) in Admin Panel Finder Module
 2). Did The Same Above For Shell Finder Module!
