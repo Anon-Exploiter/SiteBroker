@@ -1,5 +1,10 @@
-colorama
-lxml
-bs4
-requests
-dnspython
+beautifulsoup4==4.6.3
+bs4==0.0.1
+certifi==2018.8.24
+chardet==3.0.4
+colorama==0.3.9
+dnspython==1.15.0
+idna==2.7
+lxml==4.2.5
+requests==2.19.1
+urllib3==1.23
