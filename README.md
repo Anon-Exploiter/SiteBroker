@@ -103,5 +103,6 @@ Options:
 ### Note 
 <pre><code>Do not change the position of any module as given under the Usage, this may cause an failure in the working of the script...
 P.S ~ Dont Change The Colors. They're Butiphul like this.
+P.S.S ~ For Dependencies -> <a href="https://github.com/Anon-Exploiter/SiteBroker/issues/4#issuecomment-421292969" target="_blank">Solution</a>
 	~ An0n 3xPloiTeR
 </code></pre>
