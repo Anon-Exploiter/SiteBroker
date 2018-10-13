@@ -43,16 +43,17 @@ def reverseViaYGS(website):
         'remoteAddress' : webs,
         'key' : ''
     }
-	request = requests.post(url, headers=_headers, data=post).text.encode('UTF-8')
-	# print request
+	request = requests.post(url, headers=_headers, data=post)
+	request = request.text.encode('UTF-8')
 
 	grab = json.loads(request)
+	# print(json.dumps(grab, indent=4))
 
-	Status = grab['status']
-	IP = grab['remoteIpAddress']
-	Domain = grab['remoteAddress']
-	Total_Domains = grab['domainCount']
-	Array = grab['domainArray']
+	Status 			= grab['status']
+	IP 				= grab['remoteIpAddress']
+	Domain 			= grab['remoteAddress']
+	Total_Domains 	= grab['domainCount']
+	Array 			= grab['domainArray']
 
 	if (Status == 'Fail'):
 		write(var="#", color=r, data="Sorry! Reverse Ip Limit Reached.")
