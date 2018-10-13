@@ -27,10 +27,10 @@ def googleCrawl(website):
 	webs = removeHTTP(website)
 	for loop in range(0,10):
 		url = "https://google.com/search?q=" + str(search) + "&ie=utf-8&oe=utf-8&aq=t&start=" + str(loop) + "0"
-		request = requests.get(url, headers=_headers, timeout=5)
-		content = request.content
+		request = requests.get(url, headers=_headers)
+		content = request.text.encode('UTF-8')
 		soup = BeautifulSoup(content, 'lxml')
-		sub_links = soup.find_all('h3', class_='r')
+		sub_links = soup.find_all('div', class_='r')
 		for links in sub_links:
 			links = links.a['href']
 			if str(webs) in links:
@@ -40,14 +40,17 @@ def bingCrawl(website):
 	search = ("site:" + str(removeHTTP(website)))
 	webs = removeHTTP(website)
 	link = []
-	_link = []
-	_links = []
 	for loop in range(0,50):
 		url = "http://www.bing.com/search?q=" + str(search) + "&first=" + str(loop) + "0"
-		request = requests.get(url, headers=_headers, timeout=5)
-		content = request.text.encode('UTF-8')
-		links = re.findall(r'<a\shref="(.*?)"\sh="(.*?)">', content)[5]
-		link.append(links[0])
+		try:
+			request = requests.get(url, headers=_headers)
+			content = request.text.encode('UTF-8')
+			# print(content)
+			links = re.findall(r'<a\shref="(.*?)"\sh="(.*?)">', content)[5]
+			# print(links[0])
+			link.append(links[0])
+		except requests.exceptions.ConnectionError as e:
+			pass
 
 	_link = set(link)
 	for links in _link:
