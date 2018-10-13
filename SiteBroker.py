@@ -103,7 +103,7 @@ try:
             GoogleCrawl(website)
 
         elif _index == 2:
-            heading(heading="Crawling", website=website, afterWebHead=" Via Bing", color=b)
+            heading(heading="Crawling", website=website, afterWebHead=" Via Bing (might take some time)", color=b)
             BingCrawl(website)
 
         elif _index == 3:
@@ -114,7 +114,7 @@ try:
             heading(heading="Crawling", website=website, afterWebHead=" Via Google", color=c)
             GoogleCrawl(website)
 
-            heading(heading="Crawling", website=website, afterWebHead=" Via Bing", color=b)
+            heading(heading="Crawling", website=website, afterWebHead=" Via Bing (might take some time)", color=b)
             BingCrawl(website)
 
             heading(heading="Crawling", website=website, afterWebHead=" Manually :)", color=c)
@@ -198,7 +198,7 @@ try:
         heading(heading="Crawling", website=website, afterWebHead=" Via Google", color=c)
         GoogleCrawl(website)
 
-        heading(heading="Crawling", website=website, afterWebHead=" Via Bing", color=b)
+        heading(heading="Crawling", website=website, afterWebHead=" Via Bing (might take some time)", color=b)
         BingCrawl(website)
 
         heading(heading="Crawling", website=website, afterWebHead=" Manually :)", color=c)
@@ -240,9 +240,8 @@ try:
 except KeyboardInterrupt:
     write(var="~", color=w, data="Err0r: User Interrupted!")
     
-
-except Exception, e:
-    write(var="#", color=r, data="Err0r: Kindly Report the err0r below to An0n3xPloiTeR :) (If Your Internet's Working ;)\n\"\"\"\n" + str(e) + "\n\"\"\"")
+# except Exception, e:
+#     write(var="#", color=r, data="Err0r: Kindly Report the err0r below to An0n3xPloiTeR :) (If Your Internet's Working ;)\n\"\"\"\n" + str(e) + "\n\"\"\"")
 
 print(Footer)
 
