@@ -30,27 +30,20 @@ from modules import reverseViaHT,   reverseViaYGS
 from modules import whoIS,          websiteSpeed
 
 #####################################################################################################
-        ################################   Some Variables!   ################################ 
+        ################################   Variables!   ################################ 
 #####################################################################################################
 
-line = "-" * 69
-
-_headers = {
-    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
+line        = "-" * 69
+user_agent  = "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.17 Safari/537.36"
+val_Select  = f"\t{r}[$] Please Use The Index Value From The List\n\t\t[+] Not By Your Own :/\n\t\t\t ~ An0n 3xPloiTeR  \n"
+str_Index   = f"\n\t{r}[=] Please Input a Integer (i.e, 1, 2, 3) :\\\n\t\t{c}~ An0n 3xPloiTeR :)"
+_headers    = {
+    'User-Agent': user_agent,
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     'Accept-Encoding': 'gzip,deflate,sdch',
     'Accept-Language': 'en-US,en;q=0.8',
     'Connection': 'keep-alive'
 }
-
-user_agent = "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.17 Safari/537.36"
-
-header = {'User-Agent' : user_agent}
-
-val_Select = "\t{}[$] Please Use The Index Value From The List\n\t\t[+] Not By Your Own :/\n\t\t\t ~ An0n 3xPloiTeR  \n".format(r)
-
-str_Index = "\n\t{red}[=] Please Input a Integer (i.e, 1, 2, 3) :\\\n\t\t{cyan}~ An0n 3xPloiTeR :)".format(red=r, cyan=c)
-
 
 #####################################################################################################
         ################################   Built-IN Functions   ################################ 
@@ -58,18 +51,19 @@ str_Index = "\n\t{red}[=] Please Input a Integer (i.e, 1, 2, 3) :\\\n\t\t{cyan}~
 
 def InDex():
     try:
-        index = raw_input("{cyan}[~] Select Any Of Thy Indexes (i.e, 1, 2, 3): ".format(cyan=c)); int(index)
-        return index
+        index = input(f"{c}[~] Select Any Of Thy Indexes (i.e, 1, 2, 3): "); int(index)
+        return(index)
+    
     except ValueError:
         exit(str_Index)
 
 def heading(heading, website, color, afterWebHead):
     space = " " * 15
     var = str(space + heading + " '" + website + "'" + str(afterWebHead) + " ..." + space)
-    length = len(var) + 1; print "" # \n
-    print("{white}" + "-" * length + "-").format(white=w)
-    print("{color}" + var).format(color=color)
-    print("{white}" + "-" * length + "-").format(white=w); print "" # \n
+    length = len(var) + 1; print() # \n
+    print(f"{w}" + "-" * length + "-")
+    print(f"{color}" + var)
+    print(f"{w}" + "-" * length + "-"); print() # \n
 
 #####################################################################################################
         ################################   Script's Banner   ################################ 
@@ -79,9 +73,9 @@ print(Banner)
 
 #####################################################################################################
 
-website = raw_input("\n{blue}[$] Please Enter The Website You Want To Scan {red}(i.e, hackthissite.org, hack.me): {none}".format(blue=b, red=r, none=y)); website=addHTTP(website)
+website = input(f"\n{b}[$] Please Enter The Website You Want To Scan {r}(i.e, hackthissite.org, hack.me): {y}"); website=addHTTP(website)
 
-print("\n{green}[@] What You Wanna Do With The Given Website ? \n\n1). Cloudflare Check / Bypass. \n2). Website Crawler.\n3). Reverse IP.\n4). Information Gathering.\n5). Nameservers.\n6). WebSite Speed.\n7). Subdomains Scanner.\n8). Shell Finder.\n9). Admin Panel Finder.\n10). Grab Banner.\n11). All Things.\n".format(green=g)) # Options
+print(f"\n{g}[@] What You Wanna Do With The Given Website ? \n\n1). Cloudflare Check. \n2). Website Crawler.\n3). Reverse IP.\n4). Information Gathering.\n5). Nameservers.\n6). WebSite Speed.\n7). Subdomains Scanner.\n8). Shell Finder.\n9). Admin Panel Finder.\n10). Grab Banner.\n11). All Things.\n")
 
 index = int(InDex())
 
@@ -95,7 +89,7 @@ try:
         Cloudflare(website, _verbose=True)
 
     elif index == 2:
-        print("\n{}[$] With Which Method You Wanna Crawl ?\n\n{}1). Google Based Crawler. \n{}2). Bing Based Crawler.\n{}3). Manual Crawler.\n{}4). All Things.\n".format(b, g, y, c, r))
+        print(f"\n{b}[$] With Which Method You Wanna Crawl ?\n\n{g}1). Google Based Crawler. \n{y}2). Bing Based Crawler.\n{c}3). Manual Crawler.\n{r}4). All Things.\n")
         _index = int(InDex())
 
         if _index == 1:
@@ -124,7 +118,7 @@ try:
             exit(val_Select)
 
     elif index == 3:
-        print("\n{}[$] With Which Method You Wanna Do Reverse IP ?\n\n{}1). Hacker Target Based. \n{}2). YouGetSignal Based.\n{}3). All Things.\n".format(b, g, y, c))
+        print(f"\n{b}[$] With Which Method You Wanna Do Reverse IP ?\n\n{g}1). Hacker Target Based. \n{y}2). YouGetSignal Based.\n{c}3). All Things.\n")
         _index = int(InDex())
 
         if _index == 1:
@@ -146,7 +140,7 @@ try:
             exit(val_Select)
 
     elif index == 4:
-        print("\n{}[$] With Which Method You Wanna Do Information Gathering ?\n\n{}1). Whois Lookup. \n{}2). BrowserSpy Report.\n{}3). All Things.\n".format(g, b, y, c))
+        print(f"\n{g}[$] With Which Method You Wanna Do Information Gathering ?\n\n{b}1). Whois Lookup. \n{y}2). BrowserSpy Report.\n{c}3). All Things.\n")
         _index = int(InDex())
 
         if _index == 1:

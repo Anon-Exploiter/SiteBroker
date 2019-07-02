@@ -1,21 +1,3 @@
-"""
-_______________.___.
-\______   \__  |   |
- |    |  _//   |   |
- |    |   \\____   |
- |______  // ______|
-        \/ \/       
-   _____         _______           ________        __________.__         ._____________   __________ 
-  /  _  \   ____ \   _  \   ____   \_____  \___  __\______   |  |   ____ |__\__    _______\______   \
- /  /_\  \ /    \/  /_\  \ /    \    _(__  <\  \/  /|     ___|  |  /  _ \|  | |    |_/ __ \|       _/
-/    |    |   |  \  \_/   |   |  \  /       \>    < |    |   |  |_(  <_> |  | |    |\  ___/|    |   \
-\____|__  |___|  /\_____  |___|  / /______  /__/\_ \|____|   |____/\____/|__| |____| \___  |____|_  /
-        \/     \/       \/     \/         \/      \/                                     \/       \/ 
-
-                                ~ Changing Coder Name Wont Make You One :)
-                                             ~ An0n 3xPloiTeR :)
-"""
-
 from insides.colors import *
 import requests
 import re
@@ -28,13 +10,10 @@ _headers = {
     'Connection': 'keep-alive'
 }
 
-empty_Website = "\n\t{red}[=] Please Enter A Website :/\n\t\t{cyan}~ An0n 3xPloiTeR :)".format(red=r, cyan=c)
-
-wrong_URL = "\n\t{red}[=] Please Enter a Valid And Correct URL (i.e, hackthissite.org, hack.me)\n\t\t{cyan}~ An0n 3xPloiTeR :)".format(red=r, cyan=c)
-
-str_Index = "\n\t{red}[=] Please Input a Integer (i.e, 1, 2, 3) :\\\n\t\t{cyan}~ An0n 3xPloiTeR :)".format(red=r, cyan=c)
-
-val_Select = "\t{}[$] Please Use The Index Value From The List\n\t\t[+] Not By Your Own :/\n\t\t\t ~ An0n 3xPloiTeR  \n".format(r)
+empty_Website   = f"\n\t{r}[=] Please Enter A Website :/\n\t\t{c}~ An0n 3xPloiTeR :)"
+wrong_URL       = f"\n\t{r}[=] Please Enter a Valid And Correct URL (i.e, hackthissite.org, hack.me)\n\t\t{c}~ An0n 3xPloiTeR :)"
+str_Index       = f"\n\t{r}[=] Please Input a Integer (i.e, 1, 2, 3) :\\\n\t\t{c}~ An0n 3xPloiTeR :)"
+val_Select      = f"\t{r}[$] Please Use The Index Value From The List\n\t\t[+] Not By Your Own :/\n\t\t\t ~ An0n 3xPloiTeR  \n"
 
 def webNotEmpty(website):
     """
@@ -50,9 +29,11 @@ def validWebsite(website):
     Checks With a Regex If The URL Entered Is Correct Or Not! (User can use IP Too :)
     """
     web = webNotEmpty(website)
+
     if web is "valid":
         if not (re.match(r"(^(http://|https://)?([a-z0-9][a-z0-9-]*\.)+[a-z0-9][a-z0-9-]*$)", website)):
             exit(wrong_URL)
+    
     else:
         exit(empty_Website)
 
@@ -82,28 +63,33 @@ def addHTTP(website):
 
 def write(var, color, data):
     if var == None:
-        print(color + str(data))
+        print(f"{color}{str(data)}")
+
     elif var != None:
-        print("{white}[{green}" + var + "{white}] " + color + str(data)).format(
-        	white=w, green=g
-    	)
+        print(f"{w}[{g}{var}{w}]{color} {str(data)}")
 
 def Request(website, _timeout=None, _encode=None):
     """
     For Getting The Page Source || Source Code Of The Website Given.
     """
+
     try:
         if _encode == None:
             return requests.get(website, headers=_headers, timeout=_timeout).content
+
         elif _encode == True:
             return requests.get(website, headers=_headers, timeout=_timeout).text.encode('utf-8')
+
     except requests.exceptions.MissingSchema:
         pass
+
     except requests.exceptions.ContentDecodingError:
         pass
+
     except requests.exceptions.ConnectionError:
         return fg + sb + "\n[$] Err0r: Sorry! You Entered A Wrong Website 0r Website Is 0ff"
         pass
+
     except Exception as e:
         return fc + sb + "[$] Err0r: " + fg + sb + str(e)
         pass

@@ -1,4 +1,12 @@
-Version ==> 6.0.1(Current Version):
+Version => 7.0.0 (Current Version):
+
+1). Converted the whole framework into python3
+2). Fixed all the previous bugs reported, works smoothly now!
+
+______________________________________________________________________________________________________________________
+
+
+Version ==> 6.0.1 (Current Version):
 
 1). There aren't any new features, in this version.
 2). Resolved `whois` exception (due to API key), replaced it with an alternate website! 

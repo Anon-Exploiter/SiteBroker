@@ -62,14 +62,14 @@ You can download the latest version of SiteBroker by cloning the GitHub reposito
 ### Advanced Usage
 
 <pre><code>
-Author: Syed Umar Arfeen (<a href="https://www.facebook.com/0x556d6172" target="_blank">An0n 3xPloiTeR</a>)
+Author: Syed Umar Arfeen 
 
 Usage: python SiteBroker.py
 A cross-platform python based utility for information gathering and penetration automation!
 
 Options:
 
- 1). Cloudflare Bypass. 
+ 1). Cloudflare Check.
  2). Website Crawler.
   	 |____ Google Based Crawling
  	 |____ Bing Based Crawling
