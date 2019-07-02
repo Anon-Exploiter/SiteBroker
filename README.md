@@ -14,8 +14,8 @@
 
 ### Requirements
 
-- Python (2.7.*)
-- Python `pip`
+- Python (3.6.* - 3.7.*)
+- Python `pip3`
 - Python module `requests`
 - Python module `colorama`
 - Python module `dnspython`
