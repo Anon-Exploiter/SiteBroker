@@ -7,6 +7,8 @@
 
 **A cross-platform python based utility for information gathering and penetration automation!**
 
+**I don't know If I was on weed when I made this, of no use tbh! :)**
+
 <img src="https://i.imgur.com/9KubVzA.png" />
 
 ### Output
