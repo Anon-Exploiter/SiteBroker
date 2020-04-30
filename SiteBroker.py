@@ -94,7 +94,7 @@ try:
 
         if _index == 1:
             heading(heading="Crawling", website=website, afterWebHead=" Via Google", color=c)
-#            GoogleCrawl(website)
+            GoogleCrawl(website)
 
         elif _index == 2:
             heading(heading="Crawling", website=website, afterWebHead=" Via Bing (might take some time)", color=b)
@@ -102,17 +102,17 @@ try:
 
         elif _index == 3:
             heading(heading="Crawling", website=website, afterWebHead=" Manually :)", color=c)
-#            ManualCrawl(website)
+            ManualCrawl(website)
 
         elif _index == 4:
             heading(heading="Crawling", website=website, afterWebHead=" Via Google", color=c)
-#            GoogleCrawl(website)
+            GoogleCrawl(website)
 
             heading(heading="Crawling", website=website, afterWebHead=" Via Bing (might take some time)", color=b)
             BingCrawl(website)
 
             heading(heading="Crawling", website=website, afterWebHead=" Manually :)", color=c)
-#            ManualCrawl(website)
+            ManualCrawl(website)
 
         else:
             exit(val_Select)
@@ -190,13 +190,13 @@ try:
         Cloudflare(website, _verbose=True)
 
         heading(heading="Crawling", website=website, afterWebHead=" Via Google", color=c)
-#        GoogleCrawl(website)
+        GoogleCrawl(website)
 
         heading(heading="Crawling", website=website, afterWebHead=" Via Bing (might take some time)", color=b)
         BingCrawl(website)
 
         heading(heading="Crawling", website=website, afterWebHead=" Manually :)", color=c)
-#        ManualCrawl(website)
+        ManualCrawl(website)
 
         heading(heading="Doing Reverse IP OF", website=website, afterWebHead=" Via HT <3", color=g)
         reverseViaHT(website)
