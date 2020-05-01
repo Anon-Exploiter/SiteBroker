@@ -4,9 +4,7 @@ LABEL maintainer="Amin Vakil <info@aminvakil.com>"
 
 COPY requirements.txt /usr/local/src/
 
-RUN apk add --no-cache --virtual .build-deps gcc musl-dev libxml2-dev libxslt-dev \
- && pip install --no-cache-dir -r /usr/local/src/requirements.txt --upgrade \
- && apk del .build-deps
+RUN pip install --no-cache-dir -r /usr/local/src/requirements.txt --upgrade
 
 COPY modules /usr/local/src/modules
 COPY insides /usr/local/src/insides
