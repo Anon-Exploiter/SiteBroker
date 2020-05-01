@@ -26,7 +26,6 @@ You can simply run this docker image to test SiteBroker without installing pytho
 - Python module `requests`
 - Python module `colorama`
 - Python module `dnspython`
-- Python module `lxml`
 - Python module `bs4`
 
 ### Install modules
