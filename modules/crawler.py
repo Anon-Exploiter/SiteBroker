@@ -28,15 +28,15 @@ def bingCrawl(website):
 	webs 	= removeHTTP(website)
 	link 	= []
 	
-	for loop in range(0, 50):
+	for loop in range(0, 10):
 		url = f"http://www.bing.com/search?q={str(search)}&first={str(loop)}0"
 
 		try:
 			request = requests.get(url, headers=_headers)
-			content = request.text.encode('UTF-8')
-			
-			links 	= re.findall(r'<a\shref="(.*?)"\sh="(.*?)">', content.decode())[5]
-			link.append(links[0])
+			links 	= re.findall(r'<a\shref="(.*?)"\sh="(.*?)">', request.text)
+
+			for _links in links:
+				link.append(_links[0])
 		
 		except requests.exceptions.ConnectionError as e:
 			pass
