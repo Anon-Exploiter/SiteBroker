@@ -14,6 +14,11 @@
 ### Output
 <a href="https://github.com/Anon-Exploiter/SiteBroker/blob/master/output.txt" target="_blank">Sitebroker's Full Output</a>
 
+### Easy way (Docker Image)
+You can simply run this docker image to test SiteBroker without installing python packages system-wide or in a virtualenv.
+
+    docker run -it aminvakil/sitebroker
+
 ### Requirements
 
 - Python (3.6.* - 3.7.*)
