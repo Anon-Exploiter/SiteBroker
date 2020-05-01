@@ -14,7 +14,7 @@ def googleCrawl(website):
 		request = requests.get(url, headers=_headers)
 		content = request.text.encode('UTF-8')
 
-		soup 	= BeautifulSoup(content, 'lxml')
+		soup 	= BeautifulSoup(content, 'html.parser')
 		sub_links = soup.find_all('div', class_='r')
 
 		for links in sub_links:
@@ -51,7 +51,7 @@ def manualCrawl(website):
 	webs 	= removeHTTP(website)
 
 	request = Request(website, _timeout=5, _encode=True)
-	soup 	= BeautifulSoup(request, 'lxml')
+	soup 	= BeautifulSoup(request, 'html.parser')
 
 	_links 	= []
 

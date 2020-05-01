@@ -21,7 +21,6 @@
 - Python module `requests`
 - Python module `colorama`
 - Python module `dnspython`
-- Python module `lxml`
 - Python module `bs4`
 
 ### Install modules
