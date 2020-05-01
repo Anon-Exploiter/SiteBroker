@@ -17,7 +17,7 @@
 ### Easy way (Docker Image)
 You can simply run this docker image to test SiteBroker without installing python packages system-wide or in a virtualenv.
 
-    docker run -it aminvakil/sitebroker
+    docker run -it --rm aminvakil/sitebroker
 
 ### Requirements
 
