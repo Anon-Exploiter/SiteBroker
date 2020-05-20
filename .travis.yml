@@ -14,9 +14,9 @@ before_install:
 install:
 - docker build
   --no-cache
-  --tag ${TRAVIS_REPO_SLUG}:${TRAVIS_COMMIT} .
+  --tag aminvakil/sitebroker:${TRAVIS_COMMIT} .
 script:
-- DOCKERCONTAINER=$(docker run -d ${TRAVIS_REPO_SLUG}:${TRAVIS_COMMIT})
+- DOCKERCONTAINER=$(docker run -d aminvakil/sitebroker:${TRAVIS_COMMIT})
 - sleep 10
 - docker ps -f id=${DOCKERCONTAINER}
 - hadolint Dockerfile
