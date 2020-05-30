@@ -20,6 +20,7 @@ script:
 - sleep 10
 - docker ps -f id=${DOCKERCONTAINER}
 - hadolint Dockerfile
+after_success:
 - docker stop ${DOCKERCONTAINER} && docker rm -fv ${DOCKERCONTAINER}
 - echo "$DOCKER_PASSWORD" | docker login -u aminvakil --password-stdin
 - docker push aminvakil/sitebroker
