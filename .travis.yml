@@ -21,3 +21,6 @@ script:
 - docker ps -f id=${DOCKERCONTAINER}
 - hadolint Dockerfile
 - docker stop ${DOCKERCONTAINER} && docker rm -fv ${DOCKERCONTAINER}
+- docker tag ${TRAVIS_REPO_SLUG}:${TRAVIS_COMMIT} aminvakil/sitebroker
+- echo "$DOCKER_PASSWORD" | docker login -u aminvakil --password-stdin
+- docker push aminvakil/sitebroker
