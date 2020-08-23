@@ -1,8 +1,20 @@
 # SiteBroker
 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Anon-Exploiter/SiteBroker.js/graphs/commit-activity)
 [![python](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/)
-[![GitHub version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=gh&type=7.0.0&v=7.0.0&x2=0)](http://badge.fury.io/gh/boennemann%2Fbadges)
-[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=%40syed_umar)](https://twitter.com/syed__umar)
+![GitHub](https://img.shields.io/github/license/Anon-Exploiter/SiteBroker)
+[![Contributors][contributors-shield]][contributors-url]
+![GitHub closed issues](https://img.shields.io/github/issues-closed/Anon-Exploiter/SiteBroker)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Anon-Exploiter/SiteBroker)
+[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40syed_umar)](https://twitter.com/syed__umar)
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+[contributors-shield]: https://img.shields.io/github/contributors/Anon-Exploiter/SiteBroker.svg?style=flat-square
+[contributors-url]: https://github.com/Anon-Exploiter/SiteBroker/graphs/contributors
+[issues-shield]: https://img.shields.io/github/issues/Anon-Exploiter/SiteBroker.svg?style=flat-square
+[issues-url]: https://github.com/Anon-Exploiter/SiteBroker/issues
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/syedumararfeen/
 
 **A cross-platform python based utility for information gathering and penetration automation!**
 
