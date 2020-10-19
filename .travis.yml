@@ -5,7 +5,7 @@ git:
   quiet: true
 env:
   global:
-    - HADOLINT_VERSION=1.18.1
+    - HADOLINT_VERSION=1.18.2
 services:
 - docker
 before_install:
