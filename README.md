@@ -1,9 +1,9 @@
 # SiteBroker
 
+<a href="https://colab.research.google.com/github/Anon-Exploiter/SiteBroker/blob/master/SiteBroker.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Anon-Exploiter/SiteBroker.js/graphs/commit-activity)
 [![python](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/)
 ![GitHub](https://img.shields.io/github/license/Anon-Exploiter/SiteBroker)
-[![Contributors][contributors-shield]][contributors-url]
 ![GitHub closed issues](https://img.shields.io/github/issues-closed/Anon-Exploiter/SiteBroker)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Anon-Exploiter/SiteBroker)
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40syed_umar)](https://twitter.com/syed__umar)
