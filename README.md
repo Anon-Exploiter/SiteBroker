@@ -5,7 +5,6 @@
 [![python](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/)
 ![GitHub](https://img.shields.io/github/license/Anon-Exploiter/SiteBroker)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed/Anon-Exploiter/SiteBroker)
-![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Anon-Exploiter/SiteBroker)
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40syed_umar)](https://twitter.com/syed__umar)
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
