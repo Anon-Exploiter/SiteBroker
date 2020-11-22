@@ -1,0 +1,67 @@
+---
+name: CI/CD
+'on':
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+
+  hadolint:
+    name: Test dockerfile syntax
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v2
+
+      - name: Install hadolint.
+        run: |
+          sudo curl -L https://github.com/hadolint/hadolint/releases/download/v$HADOLINT_VERSION/hadolint-$(uname -s)-$(uname -m) -o /usr/local/bin/hadolint
+          sudo chmod 755 /usr/local/bin/hadolint
+        env:
+          HADOLINT_VERSION: 1.19.0
+
+      - name: Run hadolint.
+        run: hadolint Dockerfile
+
+  build:
+    name: Build and test docker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v2
+
+      - name: Build docker image.
+        run: docker build --no-cache --tag ${GITHUB_REPOSITORY}:${GITHUB_RUN_ID} .
+
+      - name: Run a container of created image.
+        run: |
+          DOCKERCONTAINER=$(docker run -d ${GITHUB_REPOSITORY}:${GITHUB_RUN_ID})
+          sleep 10
+          echo "DOCKERCONTAINER=$DOCKERCONTAINER" >> $GITHUB_ENV
+
+      - name: Check if container is still running.
+        run: docker ps -f id=${DOCKERCONTAINER}
+
+      - name: Check if the container is correctly stopped and removed.
+        run: docker stop ${DOCKERCONTAINER} && docker rm -fv ${DOCKERCONTAINER}
+
+  deploy:
+    if: ${{ github.ref == 'refs/heads/master' }}
+    needs: [hadolint, build]
+    name: Push to Quay
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v2
+
+      - name: Push to Quay
+        uses: docker/build-push-action@v1
+        with:
+          registry: quay.io
+          push: true
+          tags: latest
+          username: ${{ secrets.QUAY_USERNAME }}
+          password: ${{ secrets.QUAY_PASSWORD }}
+          repository: aminvakil/sitebroker
