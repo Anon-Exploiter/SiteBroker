@@ -50,7 +50,7 @@ jobs:
       - name: Run Trivy vulnerability scanner.
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: aminvakil/sitebroker:${GITHUB_RUN_ID}
+          image-ref: aminvakil/sitebroker:${{ github.run_id }}
           exit-code: '1'
 
   deploy:
