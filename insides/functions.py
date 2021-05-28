@@ -30,7 +30,7 @@ def validWebsite(website):
     """
     web = webNotEmpty(website)
 
-    if web is "valid":
+    if web == "valid":
         if not (re.match(r"(^(http://|https://)?([a-z0-9][a-z0-9-]*\.)+[a-z0-9][a-z0-9-]*$)", website)):
             exit(wrong_URL)
     
