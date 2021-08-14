@@ -1,10 +1,4 @@
-beautifulsoup4==4.7.1
-bs4==0.0.1
-certifi==2019.6.16
-chardet==3.0.4
-colorama==0.4.1
-dnspython==1.16.0
-idna==2.8
-requests==2.22.0
-soupsieve==1.9.2
-urllib3==1.26.5
+bs4
+colorama
+requests
+dnspython
