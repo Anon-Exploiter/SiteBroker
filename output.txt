@@ -25,7 +25,7 @@ Greetz ~ Makman <3 | Jokr HaXoR | An0nGuy | Shariq Malik | r0oth3x49 | inj3ctor 
 8). Shell Finder.                                   
 9). Admin Panel Finder.                             
 10). Grab Banner.                                   
-11). All Things.                                    
+11). Everything.                                    
 
 [~] Select Any Of Thy Indexes (i.e, 1, 2, 3): 11    
 
