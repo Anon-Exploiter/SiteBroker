@@ -75,7 +75,7 @@ print(Banner)
 
 website = input(f"\n{b}[$] Please Enter The Website You Want To Scan {r}(i.e, hackthissite.org, hack.me): {y}"); website=addHTTP(website)
 
-print(f"\n{g}[@] What You Wanna Do With The Given Website ? \n\n1). Cloudflare Check. \n2). Website Crawler.\n3). Reverse IP.\n4). Information Gathering.\n5). Nameservers.\n6). WebSite Speed.\n7). Subdomains Scanner.\n8). Shell Finder.\n9). Admin Panel Finder.\n10). Grab Banner.\n11). All Things.\n")
+print(f"\n{g}[@] What You Wanna Do With The Given Website ? \n\n1). Cloudflare Check. \n2). Website Crawler.\n3). Reverse IP.\n4). Information Gathering.\n5). Nameservers.\n6). WebSite Speed.\n7). Subdomains Scanner.\n8). Shell Finder.\n9). Admin Panel Finder.\n10). Grab Banner.\n11). Everything.\n")
 
 index = int(InDex())
 
@@ -89,7 +89,7 @@ try:
         Cloudflare(website, _verbose=True)
 
     elif index == 2:
-        print(f"\n{b}[$] With Which Method You Wanna Crawl ?\n\n{g}1). Google Based Crawler. \n{y}2). Bing Based Crawler.\n{c}3). Manual Crawler.\n{r}4). All Things.\n")
+        print(f"\n{b}[$] With Which Method You Wanna Crawl ?\n\n{g}1). Google Based Crawler. \n{y}2). Bing Based Crawler.\n{c}3). Manual Crawler.\n{r}4). Everything.\n")
         _index = int(InDex())
 
         if _index == 1:
@@ -118,7 +118,7 @@ try:
             exit(val_Select)
 
     elif index == 3:
-        print(f"\n{b}[$] With Which Method You Wanna Do Reverse IP ?\n\n{g}1). Hacker Target Based. \n{y}2). YouGetSignal Based.\n{c}3). All Things.\n")
+        print(f"\n{b}[$] With Which Method You Wanna Do Reverse IP ?\n\n{g}1). Hacker Target Based. \n{y}2). YouGetSignal Based.\n{c}3). Everything.\n")
         _index = int(InDex())
 
         if _index == 1:
@@ -140,7 +140,7 @@ try:
             exit(val_Select)
 
     elif index == 4:
-        print(f"\n{g}[$] With Which Method You Wanna Do Information Gathering ?\n\n{b}1). Whois Lookup. \n{y}2). BrowserSpy Report.\n{c}3). All Things.\n")
+        print(f"\n{g}[$] With Which Method You Wanna Do Information Gathering ?\n\n{b}1). Whois Lookup. \n{y}2). BrowserSpy Report.\n{c}3). Everything.\n")
         _index = int(InDex())
 
         if _index == 1:

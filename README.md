@@ -103,7 +103,7 @@ Options:
  8). Shell Finder.
  9). Admin Panel Finder.
  10). Grab Banner.
- 11). All Things.
+ 11). Everything.
   
   Example:
 	python SiteBroker.py
